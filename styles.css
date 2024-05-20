@@ -15,7 +15,7 @@
     --pry-color: #133917;
     --pry-color2: rgb(47, 176, 64);
     --sec-color: rgb(47, 176, 64);
-    --sec-color2: rgb(235, 225, 136);
+    --sec-color2: #fff;
     --icon-color: #fff;
     --pry-grad-color: linear-gradient(
         to bottom,
@@ -110,7 +110,7 @@ body {
     font-size: 1.4rem;
     color: var(--sec-color2);
     position: absolute;
-    right: 20%;
+    right: 5em;
 }
 
 
@@ -254,16 +254,19 @@ body {
 
 /* ------------------Home section------------------  */
 .home {
-    margin-top: 3rem;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
 }
 
 
 .slider{
-    height: 100vh;
-    margin-top: -50px;
+    height: 80vh;
+    margin: 5vh 2% 0 2% ;
     width: 100vw;
     overflow: hidden;
     position: relative;
+    border-radius: 10px;
 }
 .slider .list .item{
     width: 100%;
@@ -377,7 +380,6 @@ body {
     background-color: var(--pry-color);
     border: none;
     color: var(--sec-color2);
-    font-family: monospace;
     font-weight: bold;
     transition: .5s;
     cursor: pointer;
@@ -529,6 +531,12 @@ body {
         padding-right: 0;
     }
     .slider .list .item .content .title{
-        font-size: 50px;
+        font-size: 40px;
+    }
+}
+@media (max-width: 500px) {
+    .slider .list .item .content .title,
+    .slider .list .item .content .type {
+        font-size: smaller;
     }
 }

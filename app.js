@@ -22,41 +22,50 @@ window.addEventListener("load", function() {
 })
 
 
-//
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        console.log(entry);
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        } else {
-            entry.target.classList.remove("show")
-        }
-    });
-});
 
-const hiddenElements = document.querySelectorAll(".hidden");
-hiddenElements.forEach((el) => observer.observe(el));
+//-------------------------- Carousel ----------------------------//
+let nextBtn = document.querySelector('.next')
+let prevBtn = document.querySelector('.prev')
 
+let slider = document.querySelector('.slider')
+let sliderList = slider.querySelector('.slider .list')
+let thumbnail = document.querySelector('.slider .thumbnail')
+let thumbnailItems = thumbnail.querySelectorAll('.item')
 
+thumbnail.appendChild(thumbnailItems[0])
 
-
-// --------------------- Dropdown menu for skills section -----------------------//
+// Function for next button 
+nextBtn.onclick = function() {
+    moveSlider('next')
+}
 
 
-const dropdowns = document.querySelectorAll(".dropdown");
+// Function for prev button 
+prevBtn.onclick = function() {
+    moveSlider('prev')
+}
 
-//looping through all dropdown elements
-dropdowns.forEach(dropdown => {
-    //getting inner elements from each dropdown
-    const select = dropdown.querySelector(".select");
-    const caret = dropdown.querySelector(".caret");
-    const menu = dropdown.querySelector(".menu");
-    const options = dropdown.querySelector(".menu li");
-    const selected = dropdown.querySelector(".selected");
+
+function moveSlider(direction) {
+    let sliderItems = sliderList.querySelectorAll('.item')
+    let thumbnailItems = document.querySelectorAll('.thumbnail .item')
     
-    select.addEventListener("click", () => {
-        select.classList.toggle("select-clicked");
-        caret.classList.toggle("caret-rotate");
-        menu.classList.toggle("menu-open");
-    })
-})
+    if(direction === 'next'){
+        sliderList.appendChild(sliderItems[0])
+        thumbnail.appendChild(thumbnailItems[0])
+        slider.classList.add('next')
+    } else {
+        sliderList.prepend(sliderItems[sliderItems.length - 1])
+        thumbnail.prepend(thumbnailItems[thumbnailItems.length - 1])
+        slider.classList.add('prev')
+    }
+
+
+    slider.addEventListener('animationend', function() {
+        if(direction === 'next'){
+            slider.classList.remove('next')
+        } else {
+            slider.classList.remove('prev')
+        }
+    }, {once: true}) // Remove the event listener after it's triggered once
+}

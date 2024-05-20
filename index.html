@@ -3,37 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Onwuka Chukwuemeka</title>
+    <title>Investify</title>
     <link rel="icon" href="./imgs/sc.png">
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./style.scss">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
 
      <!-- -------------- Nav section ------------ -->
 
     <!-- ---------------- Header --------------------- -->
-    <nav class="flex">
-        <div class="msg-nav flex">
-            <a href="index.html" class="logo-link">
-                <h2 class="name">Investify...</h2>
-            </a>
-            <a href="" target="_blank" class="msg-me flex">
-                <i class="fa-solid fa-phone"></i>
-            </a>
-        </div>
+    <nav class="nav-one flex">
+        <a href="index.html">
+            <h2 class="name">Investify...</h2>
+        </a>
+        <a href="" target="_blank" class="msg-me flex">
+            <i class="fa-solid fa-phone"></i>
+        </a>
         <div class="navigation flex">
             <ul class="flex">
                 <li class="list">
                     <a class="flex" href="#Home">
                         <span class="icon">
-                            <i class="fa-solid fa-house-chimney-user fa-2x"></i>
+                            <i class="fa-solid fa-house-chimney"></i>
                         </span>
                         <span class="text">HOME</span>
                     </a>
@@ -41,7 +39,7 @@
                 <li class="list">
                     <a class="flex" href="#About">
                         <span class="icon">
-                            <i class="fa-solid fa-address-card"></i>
+                            <i class="fa-solid fa-money-bill-trend-up"></i>
                         </span>
                         <span class="text">ABOUT</span>
                     </a>
@@ -49,7 +47,7 @@
                 <li class="list">
                     <a class="flex" href="#Skills">
                         <span class="icon">
-                            <i class="fa-solid fa-briefcase fa-2x"></i>
+                            <i class="fa-solid fa-file-invoice-dollar"></i>
                         </span>
                         <span class="text">PLANS</span>
                     </a>
@@ -57,7 +55,7 @@
                 <li class="list">
                     <a class="flex" href="#">
                         <span class="icon">
-                            <i class="fa-solid fa-file-lines"></i>    
+                            <i class="fa-solid fa-user"></i>    
                         </span>
                         <span class="text">CLIENT ACCOUNT</span>
                     </a>
@@ -65,129 +63,118 @@
                 <li class="list">
                     <a class="flex" href="#">
                         <span class="icon">
-                            <i class="fa-solid fa-phone"></i>     
+                            <i class="fa-solid fa-file-shield"></i>     
                         </span>
                         <span class="text">POLICY</span>
                     </a>
                 </li>
             </ul>
         </div>
-        <div class="sign-in">
-            <a href=""></a>
-        </div>
+        <a class="sign-in" href="">SIGN IN</a>
     </nav>
 
 
-    <!-- ----------------- Home Section --------------- -->
-    <section class="home flex" id="Home">
-        <div class="sm-links flex">
-            <div>
-                <a href="">
-                    <i class="fab fa-twitter"></i>
-                </a>
-            </div>
-            <div>
-                <a href="">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-            </div>
-            <div>
-                <a href="">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
-            <div>
-                <a href="https://api.whatsapp.com/send/?phone=%2B2349082692555&text&type=phone_number&app_absent=0" target="_blank">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-            </div>
-        </div>
-        <div class="intro-text">
-            <h1 class="appearance one">Lorem Ipsum.</h1>
-            <h1 class="appearance two">Lorem Ipsum</h1>
-            <h1 class="appearance three center">&</h1>
-            <h1 class="appearance four">data analyst.</h1>
-            <p class="appearance five">
-                A warm welcome to my portfolio website, where 
-                creativity meets innovation, and dreams are 
-                transformed into reality. Join me as I unveil
-                a tapestry of my achievements and aspirations,
-                a testament to the endless possibilities when
-                imagination and consistency intertwine.
-            </p>
-            <div class="links flex">
-                <a class="flex" href="CV_Onwuka_Chukwuememka.pdf" target="_blank">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    My Resume
-                    <i class="fa-solid fa-download"></i>
-                <a class="flex" href="">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    Hire me
-                    <i class="fa-solid fa-paper-plane"></i>
-                </a>
-            </div>
-        </div>
-        <div class="photo flex">
-            <img class="flex" src="./imgs/sc.png" alt="">
-        </div>
-    </section>
+    <!-- ----------------- Container --------------- -->
+    <div class="container flex">
+        <!-- ----------------- Home Section --------------- -->
+        <section class="home flex" id="Home">
+            <div class="slider">
 
 
-    <!-- ---------------- About Section ------------ -->
-    <section class="about flex">
-        <div class="busstop" id="About"></div>
-        <h1 class="name" >About</h1>
-    </section>
-
-
-    <!-- ---------------- Skills Section --------------- -->
-    <section class="skills flex" id="Skills">
-        <div class="busstop" id="Skills"></div>
-        <h1 class="name">Skills & Technologies</h1>
-        <div class="techs flex">
-            <div class="dropdown">
-                <div class="select">
-                    <i class="fa-solid fa-database"></i>
-                    <span class="selected">Data Analytics</span>
-                    <div class="caret">
-                        <i class="fa-solid fa-caret-down"></i>
+                <div class="list">
+        
+                    <div class="item">
+                        <img src="./imgs/abuja.png" alt="">
+        
+                        <div class="content">
+                            <div class="title">MAGIC SLIDER</div>
+                            <div class="type">FLOWER</div>
+                            <div class="description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.
+                            </div>
+                            <div class="button">
+                                <button>SEE MORE</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <ul class="menu">
-                    <li>Microsoft Excel</li>
-                    <li>PowerBI</li>
-                    <li>SQL</li>
-                    <li>Tableau</li>
-                    <li>Python</li>
-                </ul>
-            </div>
-            <div class="dropdown">
-                <div class="select">
-                    <i class="fa-solid fa-database"></i>
-                    <span class="selected">Front-end Web Dev</span>
-                    <div class="caret">
-                        <i class="fa-solid fa-caret-down"></i>
+        
+                    <div class="item">
+                        <img src="./imgs/car.jpeg" alt="">
+        
+                        <div class="content">
+                            <div class="title">MAGIC SLIDER</div>
+                            <div class="type">NATURE</div>
+                            <div class="description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.
+                            </div>
+                            <div class="button">
+                                <button>SEE MORE</button>
+                            </div>
+                        </div>
                     </div>
+        
+                    <div class="item">
+                        <img src="./imgs/lib.jpg" alt="">
+        
+                        <div class="content">
+                            <div class="title">MAGIC SLIDER</div>
+                            <div class="type">PLANT</div>
+                            <div class="description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.
+                            </div>
+                            <div class="button">
+                                <button>SEE MORE</button>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="item">
+                        <img src="./imgs/wall.jpg" alt="">
+        
+                        <div class="content">
+                            <div class="title">MAGIC SLIDER</div>
+                            <div class="type">NATURE</div>
+                            <div class="description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.
+                            </div>
+                            <div class="button">
+                                <button>SEE MORE</button>
+                            </div>
+                        </div>
+                    </div>
+        
                 </div>
-                <ul class="menu">
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>BOOTSTRAP</li>
-                    <li>SASS</li>
-                    <li>TAILWIND</li>
-                    <li>JAVASCRIPT</li>
-                </ul>
+        
+        
+                <div class="thumbnail">
+        
+                    <div class="item">
+                        <img src="./imgs/abuja.png" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="./imgs/car.jpeg" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="./imgs/lib.jpg" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="./imgs/wall.jpg" alt="">
+                    </div>
+        
+                </div>
+        
+        
+                <div class="nextPrevArrows">
+                    <button class="prev"> < </button>
+                    <button class="next"> > </button>
+                </div>
+        
+        
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
-
+    
     <script src="./app.js"></script>
 </body>
 </html>

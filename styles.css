@@ -291,12 +291,12 @@ body {
 
 .slider .list .item .content .title,
 .slider .list .item .content .type{
-    font-size: 2em;
+    font-size: 3em;
     font-weight: bold;
     line-height: 1.3em;
 }
 .slider .list .item .type{
-    color: #14ff72cb;
+    color: var(--sec-color2);
 }
 .slider .list .item .button{
     display: grid;

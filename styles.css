@@ -15,8 +15,8 @@
     --pry-color: #133917;
     --pry-color2: rgb(47, 176, 64);
     --sec-color: rgb(47, 176, 64);
-    --sec-color2: #fff;
-    --icon-color: #fff;
+    --sec-color2: rgb(231, 231, 231);
+    --icon-color: silver;
     --pry-grad-color: linear-gradient(
         to bottom,
         rgb(47, 176, 64) 50%,
@@ -59,6 +59,17 @@ body {
 }
 
 
+.name-div {
+    gap: -10rem;
+}
+
+
+.name-div img {
+    width: 7em;
+    height: 4em;
+}
+
+
 .name {
     /*
     background-image: var(--pry-grad-color);
@@ -71,6 +82,7 @@ body {
     -moz-text-fill-color: transparent;
     -text-fill-color: transparent;
     */
+    font-size: 1.5em;
     color: var(--sec-color2);
 }
 
@@ -122,7 +134,7 @@ body {
 }
 
 
-.navigation ul li a, .sign-in {
+.navigation ul li a, .sign-in, .button-two {
     justify-content: center;
     color: var(--sec-color2);
     padding: 5px 8px;
@@ -229,14 +241,14 @@ body {
 }
 
 
-.sign-in {
+.sign-in, .button-two {
     background: var(--sec-color2);
     border: 2px solid;
     color: var(--pry-color);
 }
 
 
-.sign-in:hover {
+.sign-in:hover, .button-two {
     background: var(--pry-color);
     color: var(--sec-color2);
     transition: 0.5s;
@@ -361,24 +373,16 @@ body {
 
 /* nextPrevArrows Section  */
 .nextPrevArrows{
+    position: absolute;
+    top: 80%;
+    left: 10%;
     z-index: 100;
     width: 300px;
     max-width: 30%;
     display: flex;
     gap: 10px;
     align-items: center;
-}
-
-.nextPrevArrows .prev {
-    position: absolute;
-    top: 50%;
-    left: 0;
-}
-
-.nextPrevArrows .next{
-    position: absolute;
-    top: 50%;
-    right: 0;
+    z-index: 2000;
 }
 
 .nextPrevArrows button{
@@ -560,9 +564,9 @@ body {
 .packages {
     margin: 20px;
     width: 300px;
-    padding-bottom: 1.5em;
+    padding: 1em;
     height: 100%;
-    background-color: #1e2321;
+    background-color: var(--pry-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -570,18 +574,18 @@ body {
     border-radius: 20px;
     box-shadow: 0 19px 38px rgba(30, 35, 33, 1), 0 15px 12px rgba(30, 35, 33, 0.2);
     flex-wrap: wrap;
-    color: #f4f4f4;
+    color: var(--sec-color2);
   }
   
   h1,
   h2 {
-    font-size: 2.2em;
+    font-size: 1.5em;
   }
   
   .list-two li {
-    font-size: 20px;
+    font-size: 15px;
     list-style: none;
-    border-bottom: 1px solid #f4f4f4;
+    border-bottom: 1px solid var(--sec-color2);
     padding-inline-start: 0;
     border-width: 1px;
     padding: 10px;
@@ -589,7 +593,7 @@ body {
   
   .first {
     margin-top: 40px;
-    border-top: 1px solid #f4f4f4;
+    border-top: 1px solid var(--sec-color2);
   }
   
   .list-two {
@@ -615,33 +619,20 @@ body {
   }
   
   .button-two {
-    padding: 10px 30px;
-    text-decoration: none;
     font-size: 1.4em;
+    font-weight: bold;
     margin: 15px 15px;
-    border-radius: 50px;
-    color: #f4f4f4;
-    transition: all 0.3s ease 0s;
+    color: var(--pry-color);
+    background: var(--sec-color2);
   }
-  
+
+
   .button-two:hover {
-    transform: scale(1.2);
+    background: var(--pry-color);
+    color: var(--sec-color2);
+    transition: .5s;
   }
-  
-  .button1 {
-    background-color: #00cc99;
-    box-shadow: 0 0 10px 0 #00cc99 inset, 0 0 20px 2px #00cc99;
-  }
-  
-  .button2 {
-    background-color: #ff007c;
-    box-shadow: 0 0 10px 0 #ff007c inset, 0 0 20px 2px #ff007c;
-  }
-  
-  .button3 {
-    background-color: #ffae42;
-    box-shadow: 0 0 10px 0 #ffae42 inset, 0 0 20px 2px #ffae42;
-  }
+
   
   .switch {
     position: relative;
@@ -663,9 +654,8 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #1e2321;
+    background-color: var(--pry-color);
     -webkit-transition: 0.4s;
-  
     box-shadow: 2px 6px 25px #1e2321;
     transform: translate(0px, 0px);
     transition: 0.6s ease transform, 0.6s box-shadow;
@@ -678,7 +668,7 @@ body {
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: white;
+    background-color: var(--sec-color2);
     -webkit-transition: 0.4s;
     transition: 0.4s;
   }

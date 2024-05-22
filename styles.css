@@ -271,6 +271,10 @@ ul {
   line-height: 2.8;
 }
 
+.links-inner ul li h2 {
+  color: var(--pry-color);
+  text-decoration: underline;
+}
 
 .foot {
   justify-content: start;

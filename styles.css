@@ -95,7 +95,6 @@ ul {
 
 .sign-in {
   background: var(--pry-color);
-  border-radius: 10px;
   border: 2px solid var(--pry-color);
   color: #fff;
   padding: 4px;

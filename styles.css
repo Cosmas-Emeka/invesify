@@ -271,8 +271,16 @@ ul {
   line-height: 2.8;
 }
 
+
 .foot {
   justify-content: start;
+  color: var(--pry-color);
+}
+
+.bold {
+  font-weight: bold;
+  color: var(--pry-color);
+  line-height: 1.8;
 }
 
 /* Footer */

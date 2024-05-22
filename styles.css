@@ -304,6 +304,17 @@ ul {
   justify-content: space-between;
 }
 
+.footer-inner ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-inner ul li {
+
+}
+
 .footer div {
   margin-bottom: 20px;
   display: flex;

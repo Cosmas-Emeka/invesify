@@ -1,257 +1,247 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investify</title>
-    <link rel="icon" href="./imgs/sc.png">
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="./style.scss">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <title>Investify</title>
+  <meta charset="utf-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+  <link href="styles.css" rel="stylesheet" type='text/css' />
+  <link href="style.css" rel="stylesheet" type='text/css' />
+  <link rel="icon" href="./img/icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
+
 <body>
 
-     <!-- -------------- Nav section ------------ -->
+  <div class="menu-btn">
+    <i class="fas fa-bars"></i>
+  </div>
 
-    <!-- ---------------- Header --------------------- -->
-    <nav class="nav-one flex">
-        <a href="index.html" class="name-div flex">
-            <img src="./imgs/I.png" alt="">
-            <h2 class="name">nvestify...</h2>
+  <div class="container">
+    <!-- Nav -->
+    <nav class="main-nav">
+      <div class="logo">
+        <img src="./img/logo2.png" alt="Investify">
+        <h2>INVESTIFY</h2>
+      </div>
+
+      <ul class="main-menu">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT US</a></li>
+        <li><a href="#">PLANS</a></li>
+        <li><a href="#">POLICY</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+
+      <ul class="right-menu">
+        <a href="#" class="sign-in">
+          SIGN IN <i class="fas fa-chevron-right"></i>
         </a>
-        <a href="" target="_blank" class="msg-me flex">
-            <i class="fa-solid fa-phone"></i>
-        </a>
-        <div class="navigation flex">
-            <ul class="flex">
-                <li class="list">
-                    <a class="flex" href="#Home">
-                        <span class="icon">
-                            <i class="fa-solid fa-house-chimney"></i>
-                        </span>
-                        <span class="text">HOME</span>
-                    </a>
-                </li>
-                <li class="list">
-                    <a class="flex" href="#About">
-                        <span class="icon">
-                            <i class="fa-solid fa-money-bill-trend-up"></i>
-                        </span>
-                        <span class="text">ABOUT</span>
-                    </a>
-                </li>
-                <li class="list">
-                    <a class="flex" href="#Skills">
-                        <span class="icon">
-                            <i class="fa-solid fa-file-invoice-dollar"></i>
-                        </span>
-                        <span class="text">PLANS</span>
-                    </a>
-                </li>
-                <li class="list">
-                    <a class="flex" href="#">
-                        <span class="icon">
-                            <i class="fa-solid fa-user"></i>    
-                        </span>
-                        <span class="text">CLIENT ACCOUNT</span>
-                    </a>
-                </li>
-                <li class="list">
-                    <a class="flex" href="#">
-                        <span class="icon">
-                            <i class="fa-solid fa-file-shield"></i>     
-                        </span>
-                        <span class="text">POLICY</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <a class="sign-in" href="">SIGN IN</a>
+      </ul>
     </nav>
 
-
-    <!-- ----------------- Container --------------- -->
-    <div class="container flex">
-        <!-- ----------------- Home Section --------------- -->
-        <section class="home flex" id="Home">
-            <div class="slider">
-
-
-                <div class="list">
-        
-                    <div class="item">
-                        <img src="./imgs/inv.jfif" alt="">
-        
-                        <div class="content">
-                            <div class="title">ACHIEVE YOUR FINANCIAL GOALS WITH</div>
-                            <div class="type">EASE</div>
-                            <div class="button">
-                                <button>SEE MORE</button>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div class="item">
-                        <img src="./imgs/inv2.jfif" alt="">
-        
-                        <div class="content">
-                            <div class="title">OUR FINANCIAL GROWTH</div>
-                            <div class="type">OUR PRIORITY</div>
-                            <div class="button">
-                                <button>SEE MORE</button>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div class="item">
-                        <img src="./imgs/inv3.jfif" alt="">
-        
-                        <div class="content">
-                            <div class="title">INVEST IN YOUR FUTURE WITH</div>
-                            <div class="type">CONFIDENCE</div>
-                            <div class="button">
-                                <button>SEE MORE</button>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div class="item">
-                        <img src="./imgs/inv4.jfif" alt="">
-        
-                        <div class="content">
-                            <div class="title">SMART INVESTMENTS</div>
-                            <div class="type">SECURE RETURNS</div>
-                            <div class="button">
-                                <button>SEE MORE</button>
-                            </div>
-                        </div>
-                    </div>
-        
-                </div>
-        
-        
-                <div class="thumbnail">
-        
-                    <div class="item">
-                        <img src="./imgs/inv.jfif" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="./imgs/inv2.jfif" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="./imgs/inv3.jfif" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="./imgs/inv4.jfif" alt="">
-                    </div>
-        
-                </div>
-        
-        
-                <div class="nextPrevArrows">
-                    <button class="prev"> < </button>
-                    <button class="next"> > </button>
-                </div>
-        
-        
-            </div>
-        </section>
-
-
-        <!-- ---------------Plans --------------------- -->
-
-    </div>
-    <div class="top">
-        <h1>Plans & Pricing</h1>
-        <div class="toggle-btn">
-          <span style="margin: 0.8em;">Annually</span>
-          <label class="switch">
-            <input type="checkbox" id="checbox" onclick="check()" ; />
-            <span class="slider-two round"></span>
-          </label>
-          <span style="margin: 0.8em;">Monthly</span></div>
+    <!-- Showcase -->
+    <header class="showcase">
+      <div class="showcase-text">
+        <h2>Surface Deals</h2>
+      <p>
+        Select Surfaces are on sale now - save while supplies last
+      </p>
       </div>
-  
-      <div class="package-container">
-        <div class="packages">
-          <h1>Bronze</h1>
-          <h2 class="text1">&dollar;9.99</h2>
-          <h2 class="text2">&dollar;119.99</h2>
-          <ul class="list-two">
-            <li class="first">2000 Subscribers</li>
-            <li>12,000 Emails/month</li>
-            <li>Multi-User Accounts</li>
-            <li>Email Support</li>
-          </ul>
-          <a href="#" class="button-two button1">GET STARTED</a>
+      <a href="#" class="btn">
+        Shop Now <i class="fas fa-chevron-right"></i>
+      </a>
+    </header>
+
+    <!-- Home cards 1 -->
+    <section class="home-cards">
+      <div>
+        <img src="img/inv.jfif" alt="">
+        <h3>New Surface Pro 7</h3>
+        <p>
+          See how Katie Sowers, Asst. Coach for the 49ers, uses Surface Pro 7
+						to put her plans into play.
+        </p>
+        <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div>
+        <img src="https://i.ibb.co/KjGFHVJ/card2.png" alt="" />
+        <h3>New Surface Laptop 3</h3>
+        <p>
+          Express yourself powerfully with a thin, light, and elegant design,
+          faster performance, and up to 11.5 hours battery life.
+        </p>
+        <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div>
+        <img src="https://i.ibb.co/2cnshH6/card3.png" alt="" />
+        <h3>Save $150 + free controller</h3>
+        <p>
+          Buy an Xbox One X console and double your fun with a free select
+          extra controller. Starting at $349.
+        </p>
+        <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div>
+        <img src="https://i.ibb.co/G57P0Pb/card4.png" alt="" />
+        <h3>The new Microsoft Edge</h3>
+        <p>
+          Expect more. World class performance, with more privacy, more
+          productivity, and more value.
+        </p>
+        <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
+      </div>
+    </section>
+
+    <!-- Xbox -->
+    <section class="xbox">
+      <div class="content">
+        <h2>Xbox Game Pass Ultimate</h2>
+        <p>Xbox Game Pass Ultimate Xbox Live Gold and over 100 high-quality
+          console and PC games. Play together with friends and discover your
+          next favorite game.</p>
+          <a href="#" class="btn">
+            Join Now <i class="fas fa-chevron-right"></i>
+          </a>
+      </div>
+    </section>
+
+    <!-- Home cards 2 -->
+			<section class="home-cards">
+				<div>
+					<img src="https://i.ibb.co/zVqhWn2/card5.png" alt="" />
+					<h3>Microsoft Teams</h3>
+					<p>
+						Unleash the power of your team.
+					</p>
+					<a href="#">Shop Now <i class="fas fa-chevron-right"></i></a>
+				</div>
+				<div>
+					<img src="https://i.ibb.co/mGZcxcn/card6.jpg" alt="" />
+					<h3>Unlock the power of learning</h3>
+					<p>
+						Get students future-ready with Windows 10 devices. Starting at $219.
+					</p>
+					<a href="#">Shop Now <i class="fas fa-chevron-right"></i></a>
+				</div>
+				<div>
+					<img src="https://i.ibb.co/NpPvVHj/card7.png" alt="" />
+					<h3>Windows 10 Enterprise</h3>
+					<p>
+						Download the free 90-day evaluation for IT professionals.
+					</p>
+					<a href="#">Download Now <i class="fas fa-chevron-right"></i></a>
+				</div>
+				<div>
+					<img src="https://i.ibb.co/LkP4L5T/card8.png" alt="" />
+					<h3>Explore Kubernetes</h3>
+					<p>
+						Learn how Kubernetes works and get started with cloud native app
+						development today.
+					</p>
+					<a href="#">Get Started <i class="fas fa-chevron-right"></i></a>
+				</div>
+      </section>
+      
+      <!-- Carbon -->
+      <section class="carbon dark">
+        <div class="content">
+          <h2>Commiting To Carbon Negative</h2>
+          <p>Microsoft will be carbon negative by 2030 and by 2050 we will remove
+            all carbon the company has emitted since it was founded in 1975</p>
+            <a href="#" class="btn">
+              Learn More <i class="fas fa-chevron-right"></i>
+            </a>
         </div>
-        <div class="packages">
-          <h1>Silver</h1>
-          <h2 class="text1">&dollar;19.99</h2>
-          <h2 class="text2">&dollar;239.99</h2>
-          <ul class="list-two">
-            <li class="first">Basic +</li>
-            <li>Landing Pages</li>
-            <li>Pop-up Forms</li>
-            <li>Premium Support</li>
+      </section>
+
+      <!-- Follow -->
+      <section class="follow">
+        <p>Follow Microsoft</p>
+        <a href="https://facebook.com">
+          <img src="https://i.ibb.co/LrVMXNR/social-fb.png" alt="Facebook">
+        </a>
+        <a href="https://twitter.com">
+          <img src="https://i.ibb.co/vJvbLwm/social-twitter.png" alt="Twitter">
+        </a>
+        <a href="https://linkedin.com">
+          <img src="https://i.ibb.co/b30HMhR/social-linkedin.png" alt="Linkedin">
+        </a>
+      </section>
+    </div>
+      <!-- Links -->
+      <section class="links">
+        <div class="links-inner">
+          <ul>
+            <li><h3>What's New</h3></li>
+            <li><a href="#">Surface Pro X</a></li>
+            <li><a href="#">Surface Laptop 3</a></li>
+            <li><a href="#">Surface Pro 7</a></li>
+            <li><a href="#">Windows 10 apps</a></li>
+            <li><a href="#">Office apps</a></li>
           </ul>
-          <a href="#" class="button-two button2">GET STARTED</a>
-        </div>
-        <div class="packages">
-          <h1>Gold</h1>
-          <h2 class="text1">&dollar;29.99</h2>
-          <h2 class="text2">&dollar;359.99</h2>
-          <ul class="list-two">
-            <li class="first">Professional +</li>
-            <li>Marketing Automation</li>
-            <li>Instagram Ads</li>
-            <li>Facebook Ads</li>
+          <ul>
+            <li><h3>Microsoft Store</h3></li>
+            <li><a href="#">Account Profile</a></li>
+            <li><a href="#">Download Center</a></li>
+            <li><a href="#">Microsoft Store support</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Older tracking</a></li>
           </ul>
-          <a href="#" class="button-two button3">GET STARTED</a>
+          <ul>
+            <li><h3>Education</h3></li>
+            <li><a href="#">Microsfot in education</a></li>
+            <li><a href="#">Office for students</a></li>
+            <li><a href="#">Office 365 for schools</a></li>
+            <li><a href="#">Deals for studentss</a></li>
+            <li><a href="#">Microsfot Azure</a></li>
+          </ul>
+          <ul>
+            <li><h3>Enterprise</h3></li>
+            <li><a href="#">Azure</a></li>
+            <li><a href="#">AppSource</a></li>
+            <li><a href="#">Automotive</a></li>
+            <li><a href="#">Government</a></li>
+            <li><a href="#">Healthcare</a></li>
+          </ul>
+          <ul>
+            <li><h3>Developer</h3></li>
+            <li><a href="#">Visual Studio</a></li>
+            <li><a href="#">Windowszs Dev Center</a></li>
+            <li><a href="#">Developer Network</a></li>
+            <li><a href="#">TechNet</a></li>
+            <li><a href="#">Microsoft Developer</a></li>
+          </ul>
+          <ul>
+            <li><h3>Company</h3></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">About Microsoft</a></li>
+            <li><a href="#">Company news</a></li>
+            <li><a href="#">Privacy at Microsoft</a></li>
+            <li><a href="#">Inverstors</a></li>
+          </ul>
         </div>
-        <div class="package-container">
-            <div class="packages">
-              <h1>Platinum</h1>
-              <h2 class="text1">&dollar;9.99</h2>
-              <h2 class="text2">&dollar;119.99</h2>
-              <ul class="list-two">
-                <li class="first">2000 Subscribers</li>
-                <li>12,000 Emails/month</li>
-                <li>Multi-User Accounts</li>
-                <li>Email Support</li>
-              </ul>
-              <a href="#" class="button-two button1">GET STARTED</a>
-            </div>
-            <div class="packages">
-              <h1>Diamond</h1>
-              <h2 class="text1">&dollar;19.99</h2>
-              <h2 class="text2">&dollar;239.99</h2>
-              <ul class="list-two">
-                <li class="first">Basic +</li>
-                <li>Landing Pages</li>
-                <li>Pop-up Forms</li>
-                <li>Premium Support</li>
-              </ul>
-              <a href="#" class="button-two button2">GET STARTED</a>
-            </div>
-            <div class="packages">
-              <h1>V.I.P</h1>
-              <h2 class="text1">&dollar;29.99</h2>
-              <h2 class="text2">&dollar;359.99</h2>
-              <ul class="list-two">
-                <li class="first">Professional +</li>
-                <li>Marketing Automation</li>
-                <li>Instagram Ads</li>
-                <li>Facebook Ads</li>
-              </ul>
-              <a href="#" class="button-two button3">GET STARTED</a>
-            </div>
-      </div>    
-    <script src="./app.js"></script>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-inner">
+          <div><i class="fas fa-globe fa-2x"></i> English (United States)</div>
+          <ul>
+            <li><a href="#">Sitemap</a></li>
+					<li><a href="#">Contact Microsoft</a></li>
+					<li><a href="#">Privacy & cookies</a></li>
+					<li><a href="#">Terms of use</a></li>
+					<li><a href="#">Trademarks</a></li>
+					<li><a href="#">Safety & eco</a></li>
+					<li><a href="#">About our ads</a></li>
+					<li><a href="#">&copy; Microsoft 2020</a></li>
+          </ul>
+        </div>
+      </footer>
+
+  <script src="app.js"></script>
 </body>
+
 </html>

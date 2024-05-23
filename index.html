@@ -5,8 +5,7 @@
   <title>Investify</title>
   <meta charset="utf-8">
   <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
-  <link href="styles.css" rel="stylesheet" type='text/css' />
-  <link href="style.css" rel="stylesheet" type='text/css' />
+  <link href="./css/styles.css" rel="stylesheet" type='text/css' />
   <link rel="icon" href="./img/logo.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
@@ -28,14 +27,14 @@
 
       <ul class="main-menu">
         <li><a href="#">HOME</a></li>
-        <li><a href="#">ABOUT US</a></li>
+        <li><a href="dashboard.html">ABOUT US</a></li>
         <li><a href="#">PLANS</a></li>
         <li><a href="#">POLICY</a></li>
         <li><a href="#">CONTACT</a></li>
       </ul>
 
       <ul class="right-menu">
-        <a href="#" class="sign-in">
+        <a href="login.html" class="sign-in">
           SIGN IN <i class="fas fa-chevron-right"></i>
         </a>
       </ul>
@@ -55,43 +54,50 @@
     </header>
 
     <!-- Home cards 1 -->
-    <section class="home-cards">
-      <div>
-        <img src="img/inv.jfif" alt="">
-        <h3>New Surface Pro 7</h3>
-        <p>
-          See how Katie Sowers, Asst. Coach for the 49ers, uses Surface Pro 7
-						to put her plans into play.
-        </p>
-        <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
-      </div>
-      <div>
-        <img src="https://i.ibb.co/KjGFHVJ/card2.png" alt="" />
-        <h3>New Surface Laptop 3</h3>
-        <p>
-          Express yourself powerfully with a thin, light, and elegant design,
-          faster performance, and up to 11.5 hours battery life.
-        </p>
-        <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
-      </div>
-      <div>
-        <img src="https://i.ibb.co/2cnshH6/card3.png" alt="" />
-        <h3>Save $150 + free controller</h3>
-        <p>
-          Buy an Xbox One X console and double your fun with a free select
-          extra controller. Starting at $349.
-        </p>
-        <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
-      </div>
-      <div>
-        <img src="https://i.ibb.co/G57P0Pb/card4.png" alt="" />
-        <h3>The new Microsoft Edge</h3>
-        <p>
-          Expect more. World class performance, with more privacy, more
-          productivity, and more value.
-        </p>
-        <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
-      </div>
+    <section class="home-cards-container">
+      <h1>KICKSTART IN 4 EASY STEPS</h1>
+      <div class="home-cards">
+        <div>
+          <div class="steps">
+            <i class="fa-solid fa-file-invoice fa-5x"></i>
+          </div>
+          <h3>Create an Account</h3>
+          <p>
+            To sign up for a free account, simply click the
+            register button and fill out the corresponding form.
+          </p>
+        </div>
+        <div>
+          <div class="steps">
+            <i class="fa-brands fa-bitcoin fa-5x"></i>
+          </div>
+          <h3>Make a Deposit</h3>
+          <p>
+            Review our investment plans and choose the one which
+            fits your bugdet and profit which you want to have.
+          </p>
+        </div>
+        <div>
+          <div class="steps">
+            <i class="fa-solid fa-money-bill-trend-up fa-5x"></i>
+          </div>
+          <h3>Track Profit Growth</h3>
+          <p>
+            Watch your earnings accrue according to the earning
+            schedule of the plan that you have made deposit into.
+          </p>
+        </div>
+        <div>
+          <div class="steps">
+            <i class="fa-solid fa-money-bill-transfer fa-5x"></i>
+          </div>
+          <h3>Instant Cashout</h3>
+          <p>
+            The payout service is available to all customers,
+            once payment request is initiated; withdrawal will
+            pay instantly.
+          </p>
+        </div>
     </section>
 
     <!-- Xbox -->
@@ -105,7 +111,7 @@
             Join Now <i class="fas fa-chevron-right"></i>
           </a>
       </div>
-    </section>
+    </div>
 
     <!-- Home cards 2 -->
 			<section class="home-cards">
@@ -156,20 +162,104 @@
         </div>
       </section>
 
-      <!-- Follow -->
-      <section class="follow">
-        <p>Follow Microsoft</p>
-        <a href="https://facebook.com">
-          <img src="https://i.ibb.co/LrVMXNR/social-fb.png" alt="Facebook">
-        </a>
-        <a href="https://twitter.com">
-          <img src="https://i.ibb.co/vJvbLwm/social-twitter.png" alt="Twitter">
-        </a>
-        <a href="https://linkedin.com">
-          <img src="https://i.ibb.co/b30HMhR/social-linkedin.png" alt="Linkedin">
-        </a>
-      </section>
+      <div class="top">
+        <h1>PLANS & PRICING</h1>
+        <div class="toggle-btn">
+          <span style="margin: 0.8em;">Annually</span>
+          <label class="switch">
+            <input type="checkbox" id="checbox" onclick="check()" ; />
+            <span class="slider-two round"></span>
+          </label>
+          <span style="margin: 0.8em;">Monthly</span></div>
+      </div>
+  
+      <div class="package-container">
+        <div class="packages">
+          <h1>Bronze</h1>
+          <img src="./img/bronze.png" alt="">
+          <h2 class="text1">&dollar;49.99</h2>
+          <h2 class="text2">&dollar;599.99</h2>
+          <ul class="list-two">
+            <li class="first">2000 Subscribers</li>
+            <li>12,000 Emails/month</li>
+            <li>Multi-User Accounts</li>
+            <li>Email Support</li>
+          </ul>
+          <a href="#" class="button-two button1">GET STARTED</a>
+        </div>
+        <div class="packages">
+          <h1>Silver</h1>
+          <img src="./img/silver.png" alt="">
+          <h2 class="text1">&dollar;999.99</h2>
+          <h2 class="text2">&dollar;11,999.99</h2>
+          <ul class="list-two">
+            <li class="first">Basic +</li>
+            <li>Landing Pages</li>
+            <li>Pop-up Forms</li>
+            <li>Premium Support</li>
+          </ul>
+          <a href="#" class="button-two button2">GET STARTED</a>
+        </div>
+        <div class="packages">
+          <h1>Gold</h1>
+          <img src="./img/gold.png" alt="">
+          <h2 class="text1">&dollar;5,999.99</h2>
+          <h2 class="text2">&dollar;71,999.99</h2>
+          <ul class="list-two">
+            <li class="first">Professional +</li>
+            <li>Marketing Automation</li>
+            <li>Instagram Ads</li>
+            <li>Facebook Ads</li>
+          </ul>
+          <a href="#" class="button-two button3">GET STARTED</a>
+        </div>
+        <div class="package-container" id="pkgSee">
+            <div class="packages">
+              <h1>Platinum</h1>
+              <img src="./img/plat.png" alt="">
+              <h2 class="text1">&dollar;9,999.99</h2>
+              <h2 class="text2">&dollar;119,999.99</h2>
+              <ul class="list-two">
+                <li class="first">2000 Subscribers</li>
+                <li>12,000 Emails/month</li>
+                <li>Multi-User Accounts</li>
+                <li>Email Support</li>
+              </ul>
+              <a href="#" class="button-two button1">GET STARTED</a>
+            </div>
+            <div class="packages">
+              <h1>Diamond</h1>
+              <img src="./img/diamond.png" alt="">
+              <h2 class="text1">&dollar;49,999.99</h2>
+              <h2 class="text2">&dollar;599,999.99</h2>
+              <ul class="list-two">
+                <li class="first">Basic +</li>
+                <li>Landing Pages</li>
+                <li>Pop-up Forms</li>
+                <li>Premium Support</li>
+              </ul>
+              <a href="#" class="button-two button2">GET STARTED</a>
+            </div>
+            <div class="packages">
+              <h1>V.I.P</h1>
+              <img src="./img/vip.png" alt="">
+              <h2 class="text1">&dollar;99,999.99</h2>
+              <h2 class="text2">&dollar;1,199,999.99</h2>
+              <ul class="list-two">
+                <li class="first">Professional +</li>
+                <li>Marketing Automation</li>
+                <li>Instagram Ads</li>
+                <li>Facebook Ads</li>
+              </ul>
+              <a href="#" class="button-two button3">GET STARTED</a>
+            </div>
+      </div>
     </div>
+    <div class="see">
+      <a id="see-more" onclick="seeMore()" class="button-two button1">SEE MORE...</a>
+      <a id="see-less" onclick="seeLess()" class="button-two button1">SEE LESS...</a>
+    </div>
+
       <!-- Links -->
       <section class="links">
         <div class="links-inner">
@@ -249,7 +339,7 @@
         </div>
       </footer>
 
-  <script src="app.js"></script>
+  <script src="./js/app.js"></script>
 </body>
 
 </html>

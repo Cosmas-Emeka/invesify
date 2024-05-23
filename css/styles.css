@@ -61,7 +61,7 @@ ul {
   align-items: center;
 }
 
-.logo img {
+.logo-img {
   width: 3em;
   height: 2.5em;
 }
@@ -235,7 +235,7 @@ ul {
 
 
  .text-col h1 {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 1.3rem;
   text-align: center;

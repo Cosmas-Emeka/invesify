@@ -179,6 +179,10 @@ ul {
 }
 
 /* Home cards */
+.home-cards-container h1 {
+  margin: 3rem 0 2rem 0;
+}
+
 .home-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -220,34 +224,6 @@ ul {
   padding: 2rem 0 2rem 0;
 }
 
-/* Xbox */
-.xbox {
-  width: 100%;
-  height: 500px;
-  background: url('https://i.ibb.co/tBJGPD9/xbox.png') no-repeat center center/cover;
-  margin-bottom: 20px;
-}
-
-.xbox .content {
-  width: 40%;
-  padding: 50px 0 0 30px;
-}
-
-.xbox p, .carbon p {
-  margin: 10px 0 20px;
-}
-
-/* Carbon */
-.carbon {
-  width: 100%;
-  height: 350px;
-  background: url('https://i.ibb.co/72cgtsz/carbon.jpg') no-repeat center center/cover;
-}
-
-.carbon .content {
-  width: 55%;
-  padding: 100px 0 0 30px;
-}
 
 
 /* -------------------- Plan section --------------------- */
@@ -419,6 +395,37 @@ input:checked + .slider-two:before {
   cursor: pointer;
 }
 
+
+
+
+/* Xbox */
+.xbox {
+  width: 100%;
+  height: 500px;
+  background: url('https://i.ibb.co/tBJGPD9/xbox.png') no-repeat center center/cover;
+  margin-bottom: 20px;
+}
+
+.xbox .content {
+  width: 40%;
+  padding: 50px 0 0 30px;
+}
+
+.xbox p, .carbon p {
+  margin: 10px 0 20px;
+}
+
+/* Carbon */
+.carbon {
+  width: 100%;
+  height: 350px;
+  background: url('https://i.ibb.co/72cgtsz/carbon.jpg') no-repeat center center/cover;
+}
+
+.carbon .content {
+  width: 55%;
+  padding: 100px 0 0 30px;
+}
 
 
 

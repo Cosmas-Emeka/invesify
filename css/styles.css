@@ -190,7 +190,7 @@ ul {
   margin: 3rem 0 1.7rem 0;
   gap: 1rem;
   text-align: center;
-  background: url("/img/globe.png") no-repeat center center/contain;
+  background: url("/img/globe.png") no-repeat center center/cover;
 }
 
 
@@ -227,8 +227,8 @@ ul {
 
 .img-col img {
   display: block;
-  width: 25rem;
-  height: 29rem;
+  width: 20rem;
+  height: 25rem;
   margin: auto;
 }
 
@@ -242,12 +242,6 @@ ul {
 
 
 @media (max-width: 481px) {
-  .text-col {
-    backdrop-filter: blur(20px);
-  box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
-  background: $white;
-  padding: 1rem .5rem;
-  }
   .text-col p {
     font-size: smaller;
   }

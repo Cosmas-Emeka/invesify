@@ -37,6 +37,12 @@ ul {
   margin: auto;
 }
 
+.contain {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 /* Nav */
 .main-nav {
   position: fixed;
@@ -512,7 +518,7 @@ input:checked + .slider-two:before {
   padding: 100px 0 0 30px;
 }
 
-
+/* ----------------- Contact ----------------- */
 #contact {
   background: #f8f9fa;
   padding: 4rem 0 8rem;
@@ -537,14 +543,13 @@ input:checked + .slider-two:before {
 }
 
 #form-container h3 {
-  color: #000;
-  font-family: "Playfair Display", serif;
+  color: var(--pry-color);
   margin-bottom: 2rem;
 }
 
 #form-container label {
   display: block;
-  color: #000;
+  color: var(--pry-color);
   margin-top: 1rem;
 }
 
@@ -557,7 +562,6 @@ input:checked + .slider-two:before {
   width: 100%;
   box-sizing: border-box;
   height: 43px;
-  font-family: "Roboto", "Helvetica", "Sans-serif";
   font-size: 1rem;
   color: #495057;
 }
@@ -593,12 +597,53 @@ input:checked + .slider-two:before {
 
 #address-container a {
   text-decoration: none;
-  color: #f69314;
+  color:#495057;
 }
 
 #address-container a:hover {
   text-decoration: underline;
 }
+
+
+@media (max-width: 767px) {
+  .contain {
+    max-width: 540px;
+  }
+  #contact .flex {
+    flex-wrap: wrap;
+}
+
+#form-container {
+    width: 100%;
+    padding: 2rem;
+}
+
+#address-container {
+    width: 100%;
+    margin-top: 2rem;
+}
+}
+
+
+@media (max-width: 500px) {
+  #contact {
+    padding: 4rem 0;
+}
+
+  #contact h2 {
+    margin-bottom: 2rem;
+}
+
+  #form-container {
+    padding: 1.5rem;
+}
+}
+
+@media (max-width: 400px) {
+
+}
+
+
 /* end: contact us styles */
 
 

@@ -241,6 +241,19 @@ ul {
 }
 
 
+@media (max-width: 481px) {
+  .text-col {
+    backdrop-filter: blur(20px);
+  box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+  background: $white;
+  padding: 1rem .5rem;
+  }
+  .text-col p {
+    font-size: smaller;
+  }
+}
+
+
 
 
 
@@ -524,7 +537,6 @@ footer {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  
 }
 
 

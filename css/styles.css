@@ -234,8 +234,8 @@ ul {
 
 .img-col img {
   display: block;
-  width: 20rem;
-  height: 25rem;
+  width: 18rem;
+  height: 22rem;
   margin: auto;
 }
 
@@ -608,6 +608,13 @@ input:checked + .slider-two:before {
 
 #address-container a:hover {
   text-decoration: underline;
+}
+
+.contact-btn {
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 6px;
 }
 
 

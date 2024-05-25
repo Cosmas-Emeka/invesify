@@ -653,7 +653,7 @@ input:checked + .slider-two:before {
 
 /* ---------------- Footer ------------------ */
 footer {
-  background: #495057;
+  background: #000;
   padding: 5rem 0;
 }
 
@@ -669,7 +669,8 @@ footer .flex {
 footer h5 {
   color: #fff;
   margin-bottom: 1rem;
-  font-weight: 300;
+  font-weight: bold;
+  text-decoration: 4px var(--pry-color) underline;
 }
 
 footer h5.follow-us {
@@ -716,10 +717,11 @@ footer .footer-quick-links ul li a:hover {
 
 footer small {
   margin-top: 3rem;
-  font-size: 1rem;
+  font-size: .8rem;
   display: block;
   text-align: center;
   color: #fff;
+  font-weight: bold;
 }
 
 footer small a {

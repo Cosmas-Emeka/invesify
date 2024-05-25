@@ -38,4 +38,10 @@ function seeLess() {
     seeless.style.display = "none";
     seemore.style.display = "block";
 }
+
+
+
+
+/* ---------------------FAQ------------------- */
+
   

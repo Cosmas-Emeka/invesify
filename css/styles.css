@@ -695,6 +695,13 @@ footer .footer-about {
   align-items: center;
 }
 
+@media (max-width: 500px) {
+  .foot-logo-wrapper .logo-img {
+    width: 3rem;
+    height: 1.7rem;
+  }
+}
+
 footer .footer-about p {
   width: 65%;
   max-width: 300px;

@@ -529,9 +529,10 @@ input:checked + .slider-two:before {
   justify-content: space-between;
 }
 
-#contact h2 {
+#contact h1 {
+  font-size: 1.4rem;
   text-align: center;
-  margin-bottom: 4rem;
+  margin: 5rem 0 1rem 0;
 }
 
 #form-container {
@@ -540,11 +541,6 @@ input:checked + .slider-two:before {
   padding: 3rem;
   box-sizing: border-box;
   height: 0%;
-}
-
-#form-container h3 {
-  color: var(--pry-color);
-  margin-bottom: 2rem;
 }
 
 #form-container label {
@@ -556,14 +552,14 @@ input:checked + .slider-two:before {
 #form-container input,
 #form-container textarea {
   display: block;
-  border-radius: 20px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: 3px solid var(--pry-color);
   padding: 10px;
-  border: 1px solid #ced4da;
   width: 100%;
-  box-sizing: border-box;
-  height: 43px;
+  height: 38px;
   font-size: 1rem;
-  color: #495057;
+  color: #000;
 }
 
 #form-container textarea {
@@ -576,22 +572,32 @@ input:checked + .slider-two:before {
   width: 38%;
   background: #fff;
   padding: 1.5rem;
-  box-sizing: border-box;
-  height: 0%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-#address-container label {
+#address-container div {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: .5rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+#address-container i {
   font-weight: 700;
-  display: block;
   margin-top: 2rem;
 }
 
-#address-container label:first-child {
+#address-container i:first-child {
   margin-top: 0;
 }
 
 #address-container address {
-  margin-bottom: 1.5rem;
   font-style: normal;
 }
 
@@ -639,10 +645,6 @@ input:checked + .slider-two:before {
 }
 }
 
-@media (max-width: 400px) {
-
-}
-
 
 /* end: contact us styles */
 
@@ -650,72 +652,134 @@ input:checked + .slider-two:before {
 
 
 /* ---------------- Footer ------------------ */
-.footer {
-  font-size: .6rem;
-  color: var(--pry-color);
-}
-
-
-.footer a {
-  text-decoration: underline;
-  text-transform: none;
-}
-
-
 footer {
-  padding: 3.1rem 2rem 1rem 0 ;
-  color: #fff;
-  background: #616161;
+  background: #495057;
+  padding: 5rem 0;
 }
 
+.footer {
+  gap: 2rem;
+}
 
-.logo-foot {
+footer .flex {
+  padding-bottom: 6rem;
+  border-bottom: 1px solid #777;
+}
+
+footer h5 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+
+footer h5.follow-us {
+  margin-top: 1rem;
+}
+
+footer .footer-about {
+  width: 47%;
+}
+
+.foot-logo-wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
 }
 
-
-.logo-foot img {
-  width: 2rem;
+footer .footer-about p {
+  width: 65%;
+  max-width: 300px;
 }
 
-
-.row-foot {
-  background: none;
+footer .footer-quick-links {
+  width: 16%;
 }
 
+footer .footer-quick-links ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
 
-footer a {
+footer .footer-quick-links ul li {
+  margin: 10px 0;
+}
+
+footer .footer-quick-links ul li a {
+  color: #777;
+  text-decoration: none;
+}
+
+footer .footer-quick-links ul li a:hover {
+  color: #fff;
+}
+
+footer small {
+  margin-top: 3rem;
+  font-size: 1rem;
+  display: block;
+  text-align: center;
+}
+
+footer small a {
+  color: #777;
+  text-decoration: none;
+}
+
+footer small a:hover {
   color: #fff;
 }
 
 
-footer h4 {
-  margin-left: 10%;
-  font-size: 1.3rem;
+
+
+
+
+/* ------------------Media queries ------------------ */
+@media (max-width: 767px) {
+  .contain {
+    max-width: 540px;
+  }
+  #form-container {
+    width: 100%;
+    padding: 2rem;
 }
 
-
-.copyright, .copyright h5 {
-  text-align: center;
-  margin-top: 3rem;
-  margin-left: 0;
-  text-decoration: none;
+#address-container {
+    width: 100%;
+    margin-top: 2rem;
 }
 
-
-.foot-button {
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-  justify-content: space-between;
-  background: transparent;
-  border: 1px solid #fff;
-  margin: 2.5rem 12%;
+footer {
+    padding: 6rem 0;
 }
 
+footer .flex {
+    flex-wrap: wrap;
+}
+
+footer .flex > div {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+footer .flex > div:first-child {
+    margin-top: 0;
+}
+
+footer .footer-about p {
+    font-size: 1rem;
+    width: 100%;
+}
+
+footer .footer-subscribe input {
+    width: 90%;
+}
+
+footer h5.follow-us {
+    margin-top: 2rem;
+}
+}
 
 @media(max-width: 700px) {
   .menu-btn {
@@ -802,9 +866,18 @@ footer h4 {
   .links .links-inner ul {
     margin-bottom: 20px;
   }
+
   .sign-in {
     padding: 2px;
     font-size: 8px;
     margin-right: -1.8rem;
+  }
+
+  #form-container {
+    padding: 1.5rem;
+  }
+
+  footer {
+    padding: 4rem 0;
   }
 }

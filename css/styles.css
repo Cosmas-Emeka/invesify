@@ -536,6 +536,7 @@ input:checked + .slider-two:before {
 
 .email-signup input {
   max-width: 400px;
+  min-width: 280px;
   width: 100%;
   height: 30px;
   padding-left: 5px;
@@ -543,7 +544,7 @@ input:checked + .slider-two:before {
   outline: 0;
   background: #fff;
   color: #000;
-  border: 1px solid var(--net-ash);
+  border: 1px solid var(--pry-color);
 }
 
 
@@ -565,7 +566,8 @@ input:checked + .slider-two:before {
 
 
 .email-signup button:hover, nav div button:hover:nth-child(2) {
-  background: var(--pry-color);
+  background: #fff;
+  color: var(--pry-color);
   transition: 1s;
 }
 

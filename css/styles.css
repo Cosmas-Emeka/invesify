@@ -522,12 +522,16 @@ input:checked + .slider-two:before {
   width: 100%;
 }
 
+.newsletter-content p {
+  flex-wrap: wrap;
+  max-width: 600px;
+}
+
 .email-signup {
-  border-radius: 4px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   margin-top: 2rem;
   width: 100%;
   gap: 0.5rem;

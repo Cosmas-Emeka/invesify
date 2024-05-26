@@ -13,12 +13,9 @@ body {
 }
 
 
-
 :root {
   --pry-color: #133917;
 }
-
-
 
 
 a {
@@ -43,7 +40,11 @@ ul {
   padding: 0 20px;
 }
 
-/* Nav */
+/* -------------------------- Nav --------------------------- */
+.menu-btn {
+
+}
+
 .main-nav {
   position: fixed;
   top: 0;
@@ -68,6 +69,10 @@ ul {
   align-items: center;
 }
 
+.logo h3 {
+  font-size: 1.5em;
+}
+
 .logo-img {
   width: 3em;
   height: 2.5em;
@@ -75,7 +80,7 @@ ul {
 
 @media (max-width: 500px) {
   .main-nav .logo h3 {
-    font-size: small;
+    font-size: 1.3em;
   }
 
   .main-nav .logo img {
@@ -144,14 +149,6 @@ ul {
   opacity: 0.9;
 }
 
-.dark {
-  color: #fff;
-}
-
-.dark .btn {
-  background: #f4f4f4;
-  color: var(--pry-color);
-}
 
 /* Showcase */
 .showcase {
@@ -948,10 +945,11 @@ footer h5.follow-us {
 @media(max-width: 700px) {
   .menu-btn {
     position: fixed;
-    top: 0.8rem;
+    top: 0.45rem;
     display: block;
     right: 2.5%;
     z-index: 100;
+    font-size: 1.6em;
   }
 
   .menu-btn:hover {
@@ -1010,7 +1008,7 @@ footer h5.follow-us {
     margin-bottom: 20px;
   }
 
-  .carbon .content {
+  .newsletter-content {
     width: 85%;
   }
 
@@ -1034,8 +1032,8 @@ footer h5.follow-us {
 
   .sign-in {
     padding: 2px;
-    font-size: 8px;
-    margin-right: -1.8rem;
+    font-size: 0.8em;
+    margin-right: -0.9rem;
   }
 
   #form-container {

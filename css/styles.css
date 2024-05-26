@@ -522,8 +522,12 @@ input:checked + .slider-two:before {
 
 /* ----------------------FAQ----------------- */
 .accordion {
-  margin: 3em auto;
+  margin: 8em auto;
   max-width: 30em;
+}
+
+.accordion h1 {
+  text-align: center;
 }
 
 .toggle {
@@ -536,7 +540,7 @@ input:checked + .slider-two:before {
 }
 
 .title,
-.content {
+.content-acc {
   backface-visibility: hidden;
   transform: translateZ(0);
   transition: all 0.2s;
@@ -546,6 +550,8 @@ input:checked + .slider-two:before {
   background: #fff;
   padding: 1em;
   display: block;
+  cursor: pointer;
+  box-shadow: 3px 3px 6px #ddd, -3px 3px 6px #ddd;
   color: $font-color;
   font-weight: bold;
 }
@@ -563,24 +569,25 @@ input:checked + .slider-two:before {
   transform: rotate(90deg);
 }
 
-.content {
+.content-acc {
   max-height: 0;
   overflow: hidden;
   background-color: #fff;
-  p {
-    margin: 0;
-    padding: 0.5em 1em 1em;
-    font-size: 0.9em;
-    line-height: 1.5;
-  }
+}
+
+.content-acc p {
+  margin: 0;
+  padding: 0.5em 1em 1em;
+  font-size: 0.9em;
+  line-height: 1.5;
 }
 
 .toggle:checked {
   & + .title,
-  & + .title + .content {
+  & + .title + .content-acc {
     box-shadow: 3px 3px 6px #ddd, -3px 3px 6px #ddd;
   }
-  & + .title + .content {
+  & + .title + .content-acc {
     max-height: 500px;
   }
   & + .title:before {
@@ -767,6 +774,7 @@ footer .footer-about {
   display: flex;
   flex-direction: row;
   align-items: center;
+  color: #146e1d;
 }
 
 @media (max-width: 500px) {

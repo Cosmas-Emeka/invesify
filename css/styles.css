@@ -211,7 +211,8 @@ ul {
 }
 
 
-.text-col { 
+.text-col {
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
   background: $white;
@@ -977,6 +978,7 @@ footer h5.follow-us {
     transform: translateX(-700px);
     transition: transform 0 ease-in-out;
     color: #c2b8b8;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
     background: $white;

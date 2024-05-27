@@ -12,8 +12,8 @@
     <div class="loginDiv" id="loginDiv">
       <h1>Login</h1>
       <div class="inputField">
-        <input type="text" id="username" required aria-invalid="false" />
-        <label>Email or Username</label>
+        <input type="email" id="email" required aria-invalid="false" />
+        <label>Email</label>
       </div>
       <div class="inputField">
         <input type="password" id="password" required aria-invalid="false" />
@@ -26,7 +26,7 @@
       >
         <p>You have entered an invalid username or password.</p>
       </div>
-      <button id="login" class="login">Login</button>
+      <button id="submit" class="login">Login</button>
     </div>
 
     <div id="success" class="modal" aria-modal="true">
@@ -39,7 +39,57 @@
     </div>
 
     <script>
-      
+      const username = document.getElementById("email");
+      const password = document.getElementById("password");
+      const success = document.getElementById("success");
+      const error = document.getElementById("error");
+      const div = document.getElementById("loginDiv");
+
+      document.getElementById("submit").onclick = function () {
+        let valid = email.checkValidity() && password.checkValidity();
+
+        if (!valid) {
+          error.style.display = "block";
+          error.style.animation = "shake 0.5s 1";
+          password.setAttribute("aria-invalid", "true");
+          email.setAttribute("aria-invalid", "true");
+        } else {
+          error.style.display = "none";
+          div.style.display = "none";
+          success.style.display = "block";
+        }
+      };
+
+      username.addEventListener("keyup", function (event) {
+        let userValid = email.checkValidity();
+        let passValid = password.checkValidity();
+
+        if (passValid) {
+          password.setAttribute("aria-invalid", "false");
+        }
+        if (userValid) {
+          email.setAttribute("aria-invalid", "false");
+        }
+      });
+
+      password.addEventListener("keyup", function (event) {
+        let passValid = password.checkValidity();
+        let userValid = email.checkValidity();
+
+        if (passValid) {
+          password.setAttribute("aria-invalid", "false");
+        }
+        if (userValid) {
+          email.setAttribute("aria-invalid", "false");
+        }
+      });
+
+      function closeModal() {
+        success.style.display = "none";
+        div.style.display = "block";
+        email.value = "";
+        password.value = "";
+      }
     </script>
   </body>
 </html>

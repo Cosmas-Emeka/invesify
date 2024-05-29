@@ -1,95 +1,50 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Register on Investify</title>
+    <link rel="icon" href="./img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/register.css" />
-    <link rel="script" href="" />
-    <script type="module" src="./js/register.js" defer></script>
+    <script defer src="./js/register.js"></script>
   </head>
   <body>
-    <div class="loginDiv" id="loginDiv">
-      <h1>Login</h1>
-      <div class="inputField">
-        <input type="email" id="email" required aria-invalid="false" />
-        <label>Email</label>
-      </div>
-      <div class="inputField">
-        <input type="password" id="password" required aria-invalid="false" />
-        <label>Password</label>
-      </div>
-      <div
-        class="error"
-        aria-errormessage="Invalid username or password."
-        id="error"
-      >
-        <p>You have entered an invalid username or password.</p>
-      </div>
-      <button id="submit" class="login">Login</button>
+    <div class="container">
+      <form id="form" action="/">
+        <h1>Registration</h1>
+        <div class="input-control">
+          <label for="firstname">First Name</label>
+          <input id="firstname" name="firstname" type="text" />
+          <div class="error"></div>
+        </div>
+        <div class="input-control">
+          <label for="lastname">Last Name</label>
+          <input id="lastname" name="lastname" type="text" />
+          <div class="error"></div>
+        </div>
+        <div class="input-control">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="text" />
+          <div class="error"></div>
+        </div>
+        <div class="input-control">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" />
+          <div class="error"></div>
+        </div>
+        <div class="input-control">
+          <label for="password2">Confirm Password</label>
+          <input id="password2" name="password2" type="password" />
+          <div class="error"></div>
+        </div>
+        <button type="submit" id="submit">REGISTER</button>
+      </form>
     </div>
-
-    <div id="success" class="modal" aria-modal="true">
-      <div class="modal-content">
-        <h1>Login Successful!</h1>
-        <span>Welcome to Investify</span>
-        <span id="smile">😁</span>
-        <button id="close" class="login" onclick="closeModal()">Logout</button>
-      </div>
-    </div>
-
-    <script>
-      const username = document.getElementById("email");
-      const password = document.getElementById("password");
-      const success = document.getElementById("success");
-      const error = document.getElementById("error");
-      const div = document.getElementById("loginDiv");
-
-      document.getElementById("submit").onclick = function () {
-        let valid = email.checkValidity() && password.checkValidity();
-
-        if (!valid) {
-          error.style.display = "block";
-          error.style.animation = "shake 0.5s 1";
-          password.setAttribute("aria-invalid", "true");
-          email.setAttribute("aria-invalid", "true");
-        } else {
-          error.style.display = "none";
-          div.style.display = "none";
-          success.style.display = "block";
-        }
-      };
-
-      username.addEventListener("keyup", function (event) {
-        let userValid = email.checkValidity();
-        let passValid = password.checkValidity();
-
-        if (passValid) {
-          password.setAttribute("aria-invalid", "false");
-        }
-        if (userValid) {
-          email.setAttribute("aria-invalid", "false");
-        }
-      });
-
-      password.addEventListener("keyup", function (event) {
-        let passValid = password.checkValidity();
-        let userValid = email.checkValidity();
-
-        if (passValid) {
-          password.setAttribute("aria-invalid", "false");
-        }
-        if (userValid) {
-          email.setAttribute("aria-invalid", "false");
-        }
-      });
-
-      function closeModal() {
-        success.style.display = "none";
-        div.style.display = "block";
-        email.value = "";
-        password.value = "";
-      }
-    </script>
   </body>
 </html>

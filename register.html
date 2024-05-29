@@ -3,8 +3,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register on Investify</title>
-    <link rel="icon" href="./img/logo.png">
+    <title>Form Validation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,20 +11,15 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/register.css" />
-    <script defer src="./js/register.js"></script>
+    <script type="module" src="./js/register.js" defer></script>
   </head>
   <body>
     <div class="container">
       <form id="form" action="/">
         <h1>Registration</h1>
         <div class="input-control">
-          <label for="firstname">First Name</label>
-          <input id="firstname" name="firstname" type="text" />
-          <div class="error"></div>
-        </div>
-        <div class="input-control">
-          <label for="lastname">Last Name</label>
-          <input id="lastname" name="lastname" type="text" />
+          <label for="username">Username</label>
+          <input id="username" name="username" type="text" />
           <div class="error"></div>
         </div>
         <div class="input-control">
@@ -39,11 +33,11 @@
           <div class="error"></div>
         </div>
         <div class="input-control">
-          <label for="password2">Confirm Password</label>
+          <label for="password2">Password again</label>
           <input id="password2" name="password2" type="password" />
           <div class="error"></div>
         </div>
-        <button type="submit" id="submit">REGISTER</button>
+        <button type="submit" id="submit">Sign Up</button>
       </form>
     </div>
   </body>

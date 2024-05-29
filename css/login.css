@@ -73,7 +73,6 @@ input[type="password"]:autofill {
   width: clamp(350px, 30%, 420px);
   height: clamp(400px, 50%, 450px);
   background-color: #c7e8ca;
-  border-radius: 35px;
   box-sizing: content-box;
   box-shadow: 0 0 20px -8px #4a7d47;
 }
@@ -88,7 +87,6 @@ input[type="password"]:autofill {
   color: white;
   border: none;
   cursor: pointer;
-  border-radius: 15px;
   font-size: 18px;
   box-shadow: 0 0 10px -5px #2d5c29;
   transition: all 0.1s;
@@ -105,7 +103,6 @@ input[type="password"]:autofill {
   font-size: 20px;
   background-color: #5d9c59;
   transition: all 0.1s;
-  box-shadow: 0 0 20px -2px #2d5c29;
 }
 
 .login:active {

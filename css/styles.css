@@ -546,7 +546,7 @@ nav div button:hover:nth-child(2) {
 }
 
 .accordion-two {
-  margin: -2em auto;
+  margin: 0 auto;
 }
 
 .accordion h1 {
@@ -576,12 +576,12 @@ nav div button:hover:nth-child(2) {
   display: block;
   cursor: pointer;
   box-shadow: 0 0 20px -8px #4a7d47;
-  color: $font-color;
+  color: #000; /* Use a specific color instead of $font-color */
   font-weight: bold;
 }
 
-.title:after,
-.title:before {
+.title::after,
+.title::before {
   content: "";
   position: absolute;
   right: 1.25em;
@@ -592,7 +592,7 @@ nav div button:hover:nth-child(2) {
   transition: all 0.2s;
 }
 
-.title:after {
+.title::after {
   transform: rotate(90deg);
 }
 
@@ -609,18 +609,18 @@ nav div button:hover:nth-child(2) {
   line-height: 1.5;
 }
 
-.toggle:checked {
-  & + .title,
-  & + .title + .content-acc {
-    box-shadow: 0 0 20px -8px #4a7d47;
-  }
-  & + .title + .content-acc {
-    max-height: 500px;
-  }
-  & + .title:before {
-    transform: rotate(90deg) !important;
-  }
+.toggle:checked + .title + .content-acc {
+  max-height: 500px;
 }
+
+.toggle:checked + .title {
+  box-shadow: 0 0 20px -8px #4a7d47;
+}
+
+.toggle:checked + .title::before {
+  transform: rotate(90deg) !important;
+}
+
 
 /* ----------------- Contact ----------------- */
 #contact {

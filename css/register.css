@@ -1,24 +1,41 @@
 body {
   background: linear-gradient(to right, #133917, #1b5221, #267e31);
   font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 :root {
   --pry-color: #133917;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
 #form {
-  width: 300px;
-  margin: 20vh auto 0 auto;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
   padding: 20px;
   background-color: whitesmoke;
   border-radius: 4px;
-  font-size: 12px;
+  font-size: 14px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #form h1 {
   color: var(--pry-color);
   text-align: center;
+  font-size: 24px;
 }
 
 #form button {
@@ -35,19 +52,21 @@ body {
 .input-control {
   display: flex;
   flex-direction: column;
+  margin-bottom: 15px;
 }
 
 .input-control input {
   border: 2px solid #f0f0f0;
   border-radius: 4px;
-  display: block;
-  font-size: 12px;
+  font-size: 14px;
   padding: 10px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .input-control input:focus {
   outline: 0;
+  border-color: var(--pry-color);
 }
 
 .input-control.success input {
@@ -60,6 +79,81 @@ body {
 
 .input-control .error {
   color: #ff3860;
-  font-size: 9px;
+  font-size: 12px;
   height: 13px;
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  #form {
+    padding: 15px;
+  }
+
+  #form h1 {
+    font-size: 20px;
+  }
+
+  #form button {
+    padding: 8px;
+  }
+
+  .input-control input {
+    padding: 8px;
+    font-size: 12px;
+  }
+}
+
+/* --------------------------- Popup Prompt -------------------------- */
+#popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s;
+}
+
+#popup.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 90%;
+  box-sizing: border-box;
+}
+
+.popup-content p {
+  color: #133917;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.close:hover {
+  color: #333;
 }

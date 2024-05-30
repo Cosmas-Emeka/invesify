@@ -1,36 +1,45 @@
-// register.js
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js";
 import {
   getAuth,
   createUserWithEmailAndPassword,
 } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-auth.js";
+import {
+  getDatabase,
+  ref,
+  get,
+  child,
+} from "https://www.gstatic.com/firebasejs/10.12.1/firebase-database.js";
 
 // Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyDosNrhPrcRC2UpOu9Wu3N2p3jaUwbJyDI",
   authDomain: "login-example-c7c78.firebaseapp.com",
   projectId: "login-example-c7c78",
-  storageBucket: "login-example-c7c78",
+  storageBucket: "login-example-c7c78.appspot.com",
   messagingSenderId: "298272317823",
   appId: "1:298272317823:web:07b88844cd084699197a4a",
+  databaseURL: "https://login-example-c7c78-default-rtdb.firebaseio.com",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const database = getDatabase(app);
 
-// Form validation
+// DOM Elements
 const form = document.getElementById("form");
 const username = document.getElementById("username");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const password2 = document.getElementById("password2");
+const submit = document.getElementById("submit");
+const popup = document.getElementById("popup");
+const popupMessage = document.getElementById("popup-message");
 
+// Form validation
 const setError = (element, message) => {
   const inputControl = element.parentElement;
   const errorDisplay = inputControl.querySelector(".error");
-
   errorDisplay.innerText = message;
   inputControl.classList.add("error");
   inputControl.classList.remove("success");
@@ -39,7 +48,6 @@ const setError = (element, message) => {
 const setSuccess = (element) => {
   const inputControl = element.parentElement;
   const errorDisplay = inputControl.querySelector(".error");
-
   errorDisplay.innerText = "";
   inputControl.classList.add("success");
   inputControl.classList.remove("error");
@@ -47,11 +55,23 @@ const setSuccess = (element) => {
 
 const isValidEmail = (email) => {
   const re =
-    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(String(email).toLowerCase());
 };
 
-const validateInputs = () => {
+// Function to check if username already exists in the database
+const checkUsernameExists = async (username) => {
+  const dbRef = ref(database, `users`);
+  try {
+    const snapshot = await get(child(dbRef, username));
+    return snapshot.exists();
+  } catch (error) {
+    console.error(error);
+    return false;
+  }
+};
+
+const validateInputs = async () => {
   const usernameValue = username.value.trim();
   const emailValue = email.value.trim();
   const passwordValue = password.value.trim();
@@ -63,7 +83,13 @@ const validateInputs = () => {
     setError(username, "Username is required");
     isValid = false;
   } else {
-    setSuccess(username);
+    const usernameExists = await checkUsernameExists(usernameValue);
+    if (usernameExists) {
+      setError(username, "Username already taken");
+      isValid = false;
+    } else {
+      setSuccess(username);
+    }
   }
 
   if (emailValue === "") {
@@ -100,35 +126,31 @@ const validateInputs = () => {
 };
 
 // Popup functions
-function showPopup(message) {
-  const popup = document.getElementById("popup");
-  const popupMessage = document.getElementById("popup-message");
+const showPopup = (message) => {
   popupMessage.textContent = message;
   popup.classList.add("show");
-}
+};
 
-function closePopup() {
-  const popup = document.getElementById("popup");
+const closePopup = () => {
   popup.classList.remove("show");
-}
+};
 
 // Attach the closePopup function to the close button
 document.querySelector(".close").addEventListener("click", closePopup);
 
 // Submit event listener
-const submit = document.getElementById("submit");
-submit.addEventListener("click", function (event) {
+submit.addEventListener("click", async (event) => {
   event.preventDefault();
 
-  if (validateInputs()) {
+  if (await validateInputs()) {
     const emailValue = email.value.trim();
-    const passwordValue = password.value.trim();
+    const usernameValue = username.value.trim();
 
     createUserWithEmailAndPassword(auth, emailValue, passwordValue)
       .then((userCredential) => {
         const user = userCredential.user;
         showPopup(
-          "Account Created Succesfully😁. Redirecting to Login Page..."
+          "Account Created Successfully 😁. Redirecting to Login Page..."
         );
         setTimeout(() => {
           window.location.href = "login.html";

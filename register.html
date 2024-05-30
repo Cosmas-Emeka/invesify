@@ -13,7 +13,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/register.css" />
-    <script type="module" src="./js/register.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -47,7 +46,7 @@
           <input id="password2" name="password2" type="password" />
           <div class="error"></div>
         </div>
-        <button type="submit" id="submit">Register</button>
+        <button type="submit" id="submit" onclick="save()">Register</button>
         <p>Already Have an account? <a href="login.html">Sign In</a></p>
       </form>
     </div>
@@ -60,4 +59,9 @@
       </div>
     </div>
   </body>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js"></script>
+  <script type="module" src="./js/register.js" defer></script>
+  <script type="module" src="./js/registerDB.js" defer></script>
 </html>

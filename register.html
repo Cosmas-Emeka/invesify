@@ -18,7 +18,15 @@
   <body>
     <div class="container">
       <form id="form" action="/">
-        <h1>Registration on</h1>
+        <div class="logo-wrapper">
+          <img
+            class="logo-img"
+            src="./img/logo.png"
+            loading="lazy"
+            alt="Investify"
+          />
+          <h3>INVESTIFY</h3>
+        </div>
         <div class="input-control">
           <label for="username">Username</label>
           <input id="username" name="username" type="text" />
@@ -39,12 +47,12 @@
           <input id="password2" name="password2" type="password" />
           <div class="error"></div>
         </div>
-        <button type="submit" id="submit">Sign Up</button>
+        <button type="submit" id="submit">Register</button>
         <p>Already Have an account? <a href="login.html">Sign In</a></p>
       </form>
     </div>
 
-    <!-- Popup Prompt -->
+    <!-- ---------------------------- Popup Prompt --------------------------- -->
     <div id="popup" class="popup hidden">
       <div class="popup-content">
         <span class="close" onclick="closePopup()">&times;</span>

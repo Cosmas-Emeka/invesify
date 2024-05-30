@@ -11,6 +11,11 @@ body {
   padding: 0;
 }
 
+:root {
+  --pry-color: #133917;
+  --bg-color: #c7e8ca;
+}
+
 body {
   height: 50% !important;
 }

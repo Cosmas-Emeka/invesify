@@ -27,23 +27,29 @@ submit.addEventListener("click", function (event) {
   const emailValue = document.getElementById("email").value;
   const passwordValue = document.getElementById("password").value;
 
+  if (!emailValue || !passwordValue) {
+    return; // Exit early if either field is empty
+  }
+
   signInWithEmailAndPassword(auth, emailValue, passwordValue)
     .then((userCredential) => {
       document.getElementById("popup-success").style.display = "block";
     })
     .catch((error) => {
       document.getElementById("popup-error").style.display = "block";
-    }); 
+    });
 });
 
-document.getElementById("close-popup-success").addEventListener("click", function() {
-  document.getElementById("popup-success").style.display = "none";
-  window.location.href = "dashboard.html";
-});
+document
+  .getElementById("close-popup-success")
+  .addEventListener("click", function () {
+    document.getElementById("popup-success").style.display = "none";
+    window.location.href = "dashboard.html";
+  });
 
-document.getElementById("close-popup-error").addEventListener("click", function() {
-  document.getElementById("popup-error").style.display = "none";
-});
-
-
-
+document
+  .getElementById("close-popup-error")
+  .addEventListener("click", function () {
+    document.getElementById("popup-error").style.display = "none";
+    window.location.reload();
+  });

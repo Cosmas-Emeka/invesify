@@ -22,23 +22,28 @@ const auth = getAuth(app);
 // Submit button handler
 const submit = document.getElementById("submit");
 submit.addEventListener("click", function (event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    // Inputs
-    const emailValue = document.getElementById("email").value;
-    const passwordValue = document.getElementById("password").value;
+  const emailValue = document.getElementById("email").value;
+  const passwordValue = document.getElementById("password").value;
 
-    createUserWithEmailAndPassword(auth, emailValue, passwordValue)
-        .then((userCredential) => {
-            // Automatically sign in the user
-            return signInWithEmailAndPassword(auth, emailValue, passwordValue);
-        })
-        .then((userCredential) => {
-            alert("Account created and logged in successfully!");
-            window.location.href = "dashboard.html";
-        })
-        .catch((error) => {
-            const errorMessage = error.message;
-            alert(errorMessage);
-        });
+  signInWithEmailAndPassword(auth, emailValue, passwordValue)
+    .then((userCredential) => {
+      document.getElementById("popup-success").style.display = "block";
+    })
+    .catch((error) => {
+      document.getElementById("popup-error").style.display = "block";
+    }); 
 });
+
+document.getElementById("close-popup-success").addEventListener("click", function() {
+  document.getElementById("popup-success").style.display = "none";
+  window.location.href = "dashboard.html";
+});
+
+document.getElementById("close-popup-error").addEventListener("click", function() {
+  document.getElementById("popup-error").style.display = "none";
+});
+
+
+

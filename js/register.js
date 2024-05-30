@@ -101,19 +101,19 @@ const validateInputs = () => {
 
 // Popup functions
 function showPopup(message) {
-  const popup = document.getElementById('popup');
-  const popupMessage = document.getElementById('popup-message');
+  const popup = document.getElementById("popup");
+  const popupMessage = document.getElementById("popup-message");
   popupMessage.textContent = message;
-  popup.classList.add('show');
+  popup.classList.add("show");
 }
 
 function closePopup() {
-  const popup = document.getElementById('popup');
-  popup.classList.remove('show');
+  const popup = document.getElementById("popup");
+  popup.classList.remove("show");
 }
 
 // Attach the closePopup function to the close button
-document.querySelector('.close').addEventListener('click', closePopup);
+document.querySelector(".close").addEventListener("click", closePopup);
 
 // Submit event listener
 const submit = document.getElementById("submit");
@@ -127,9 +127,11 @@ submit.addEventListener("click", function (event) {
     createUserWithEmailAndPassword(auth, emailValue, passwordValue)
       .then((userCredential) => {
         const user = userCredential.user;
-        showPopup("Account Created Succesfully😁. Redirecting to Login Page...");
+        showPopup(
+          "Account Created Succesfully😁. Redirecting to Login Page..."
+        );
         setTimeout(() => {
-          window.location.href("login.html");
+          window.location.href = "login.html";
         }, 2000);
       })
       .catch((error) => {

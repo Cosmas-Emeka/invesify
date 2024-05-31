@@ -16,7 +16,7 @@ li {
   --poppins: "Poppins", sans-serif;
   --lato: "Lato", sans-serif;
 
-  --light: #f9f9f9;
+  --light: #133917;
   --blue: #fff;
   --light-blue: #cfe8ff;
   --grey: #eee;
@@ -34,8 +34,8 @@ html {
 }
 
 body.dark {
-  --light: #133917;
-  --grey: #0c1d0d;
+  --light: #c7e8ca;
+  --grey: #133917;
   --dark: #fbfbfb;
 }
 
@@ -623,10 +623,6 @@ body {
     min-width: 420px;
   }
 }
-
-
-
-
 
 @media screen and (max-width: 768px) {
   #sidebar {

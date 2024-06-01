@@ -145,6 +145,7 @@ submit.addEventListener("click", async (event) => {
   if (await validateInputs()) {
     const emailValue = email.value.trim();
     const usernameValue = username.value.trim();
+    const passwordValue = password.value.trim();
 
     createUserWithEmailAndPassword(auth, emailValue, passwordValue)
       .then((userCredential) => {

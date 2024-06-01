@@ -1,64 +1,38 @@
-const allSideMenu = document.querySelectorAll("#sidebar .side-menu.top li a");
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-auth.js";
 
-allSideMenu.forEach((item) => {
-  const li = item.parentElement;
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyDosNrhPrcRC2UpOu9Wu3N2p3jaUwbJyDI",
+  authDomain: "login-example-c7c78.firebaseapp.com",
+  projectId: "login-example-c7c78",
+  storageBucket: "login-example-c7c78.appspot.com",
+  messagingSenderId: "298272317823",
+  appId: "1:298272317823:web:07b88844cd084699197a4a",
+};
 
-  item.addEventListener("click", function () {
-    allSideMenu.forEach((i) => {
-      i.parentElement.classList.remove("active");
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+// Function to check authentication status
+function checkAuth() {
+    auth.onAuthStateChanged(user => {
+        const loadingScreen = document.getElementById('loading-screen');
+        const dashboardContent = document.getElementById('dashboard-content');
+
+        if (user) {
+            // User is logged in, show the dashboard
+            loadingScreen.style.display = 'none';
+            dashboardContent.style.display = 'block';
+        } else {
+            // User is not logged in, redirect to login page
+            window.location.href = 'login.html'; // Change this to your actual login page URL
+        }
     });
-    li.classList.add("active");
-  });
-});
-
-// TOGGLE SIDEBAR
-const menuBar = document.querySelector("#content nav .bx.bx-menu");
-const sidebar = document.getElementById("sidebar");
-
-menuBar.addEventListener("click", function () {
-  sidebar.classList.toggle("hide");
-});
-
-const searchButton = document.querySelector(
-  "#content nav form .form-input button"
-);
-const searchButtonIcon = document.querySelector(
-  "#content nav form .form-input button .bx"
-);
-const searchForm = document.querySelector("#content nav form");
-
-searchButton.addEventListener("click", function (e) {
-  if (window.innerWidth < 576) {
-    e.preventDefault();
-    searchForm.classList.toggle("show");
-    if (searchForm.classList.contains("show")) {
-      searchButtonIcon.classList.replace("bx-search", "bx-x");
-    } else {
-      searchButtonIcon.classList.replace("bx-x", "bx-search");
-    }
-  }
-});
-
-if (window.innerWidth < 768) {
-  sidebar.classList.add("hide");
-} else if (window.innerWidth > 576) {
-  searchButtonIcon.classList.replace("bx-x", "bx-search");
-  searchForm.classList.remove("show");
 }
 
-window.addEventListener("resize", function () {
-  if (this.innerWidth > 576) {
-    searchButtonIcon.classList.replace("bx-x", "bx-search");
-    searchForm.classList.remove("show");
-  }
-});
-
-const switchMode = document.getElementById("switch-mode");
-
-switchMode.addEventListener("change", function () {
-  if (this.checked) {
-    document.body.classList.add("dark");
-  } else {
-    document.body.classList.remove("dark");
-  }
-});
+// Call the checkAuth function when the page loads
+window.onload = function() {
+    checkAuth();
+};

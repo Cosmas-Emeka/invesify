@@ -6,6 +6,7 @@ import {
 import {
   getDatabase,
   ref,
+  set,
   get,
   child,
 } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-database.js";
@@ -150,12 +151,22 @@ submit.addEventListener("click", async (event) => {
     createUserWithEmailAndPassword(auth, emailValue, passwordValue)
       .then((userCredential) => {
         const user = userCredential.user;
-        showPopup(
-          "Account Created Successfully 😁. Redirecting to Login Page..."
-        );
-        setTimeout(() => {
-          window.location.href = "login.html";
-        }, 2000);
+
+        // Store user data in Realtime Database
+        set(ref(database, 'users/' + user.uid), {
+          username: usernameValue,
+          email: emailValue
+        }).then(() => {
+          showPopup(
+            "Account Created Successfully 😁. Redirecting to Login Page..."
+          );
+          setTimeout(() => {
+            window.location.href = "login.html";
+          }, 2000);
+        }).catch((error) => {
+          console.error("Error writing user data:", error);
+          showPopup("Error writing user data: " + error.message);
+        });
       })
       .catch((error) => {
         const errorMessage = error.message;

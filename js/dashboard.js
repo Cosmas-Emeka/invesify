@@ -38,8 +38,8 @@ document.addEventListener("DOMContentLoaded", function () {
       dashboardContent.style.display = "block";
 
       // Display user data
-      const userEmail = user.email;
-      displayUserData(userEmail);
+      const userId = user.uid; // Use UID instead of email
+      displayUserData(userId);
     } else {
       // User is not logged in, redirect to login page
       window.location.href = "login.html"; // Change this to your actual login page URL
@@ -48,9 +48,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Function to display user data from Realtime Database
-function displayUserData(email) {
+function displayUserData(uid) {
   const dbRef = ref(database);
-  get(child(dbRef, `users/${encodeURIComponent(email)}`))
+  get(child(dbRef, `users/${uid}`))
     .then((snapshot) => {
       if (snapshot.exists()) {
         const userData = snapshot.val();
@@ -60,8 +60,7 @@ function displayUserData(email) {
         ).textContent = `Welcome, ${username}!`;
         const userDataDiv = document.querySelector(".user-info");
         userDataDiv.innerHTML = `
-            <p>Email: ${userData.email}</p>
-            <p>Location: ${userData.location}</p>
+            <p>Hello: ${userData.username}</p>
           `;
       } else {
         console.log("No user data found");

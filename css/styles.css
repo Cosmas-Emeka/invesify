@@ -6,7 +6,7 @@
 
 body {
   font-family: "Times New Roman", Times, serif;
-  background: #c7e8ca;
+  background: #fff;
   color: var(--pry-color);
   font-size: 15px;
   line-height: 1.5;
@@ -47,7 +47,7 @@ ul {
   padding: 6px 13px;
   margin: 15px 15px;
   background: var(--pry-color);
-  color: var(--bg-color);
+  color: #fff;
   font-size: 15px;
   border: 2px solid var(--pry-color);
 }
@@ -70,7 +70,7 @@ ul {
   height: 3rem;
   padding: 20px 0;
   font-size: 13px;
-  background: var(--bg-color);
+  background: #fff;
   z-index: 1;
   padding: 0 2.5% 0 2.5%;
   box-shadow: 0 0 20px -8px #4a7d47;
@@ -126,7 +126,7 @@ ul {
 .sign-in {
   background: var(--pry-color);
   border: 2px solid var(--pry-color);
-  color: var(--bg-color);
+  color: #fff;
   padding: 4px 10px;
   font-size: 10px;
   margin-right: 0;
@@ -206,8 +206,8 @@ ul {
 }
 
 .text-col {
-  box-shadow: 0 0 20px -8px #4a7d47;
-  background: transparent;
+  box-shadow: 0 0 20px -8px #b5bdb5;
+  background: var(--bg-color);
   padding: 1rem 0.5rem;
 }
 
@@ -294,9 +294,9 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: transparent;
+  background: var(--bg-color);
   width: 9rem;
-  box-shadow: 0 0 20px -8px #4a7d47;
+  box-shadow: 0 0 20px -8px #b5bdb5;
   border-radius: 50%;
   padding: 2rem 0 2rem 0;
 }
@@ -323,12 +323,12 @@ ul {
   width: 280px;
   padding: 1em;
   height: 100%;
-  background: transparent;
+  background: var(--bg-color);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  box-shadow: 0 0 20px -8px #4a7d47;
+  box-shadow: 0 0 20px -8px #b5bdb5;
   flex-wrap: wrap;
   color: var(--pry-color);
 }
@@ -534,7 +534,7 @@ input:checked + .slider-two:before {
 
 .email-signup button:hover,
 nav div button:hover:nth-child(2) {
-  background: var(--bg-color);
+  background: #fff;
   color: var(--pry-color);
   transition: 1s;
 }
@@ -575,7 +575,7 @@ nav div button:hover:nth-child(2) {
   padding: 1em;
   display: block;
   cursor: pointer;
-  box-shadow: 0 0 20px -8px #4a7d47;
+  box-shadow: 0 0 20px -8px #b5bdb5;
   color: #000; /* Use a specific color instead of $font-color */
   font-weight: bold;
 }
@@ -614,7 +614,7 @@ nav div button:hover:nth-child(2) {
 }
 
 .toggle:checked + .title {
-  box-shadow: 0 0 20px -8px #4a7d47;
+  box-shadow: 0 0 20px -8px #b5bdb5;
 }
 
 .toggle:checked + .title::before {
@@ -624,7 +624,7 @@ nav div button:hover:nth-child(2) {
 
 /* ----------------- Contact ----------------- */
 #contact {
-  background: var(--bg-color);
+  background: #fff;
   padding: 4rem 0 8rem;
 }
 
@@ -645,7 +645,7 @@ nav div button:hover:nth-child(2) {
   padding: 3rem;
   box-sizing: border-box;
   height: 0%;
-  box-shadow: 0 0 20px -8px #4a7d47;
+  box-shadow: 0 0 20px -8px #b5bdb5;
 }
 
 #form-container label {
@@ -692,7 +692,7 @@ nav div button:hover:nth-child(2) {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  box-shadow: 0 0 20px -8px #4a7d47;
+  box-shadow: 0 0 20px -8px #b5bdb5;
 }
 
 #address-container div {

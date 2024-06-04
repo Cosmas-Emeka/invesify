@@ -1080,12 +1080,4 @@ body::-webkit-scrollbar-thumb {
   .content {
     left: 60px;
   }
-
-  .review-container {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  }
-
-  .chart {
-    width: 100%;
-  }
 }

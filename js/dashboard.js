@@ -59,14 +59,40 @@ function displayUserData(uid) {
     .then((snapshot) => {
       if (snapshot.exists()) {
         const userData = snapshot.val();
-        const username = userData.username; // Retrieve the username
-        document.getElementById(
-          "welcomeMessage"
-        ).textContent = `Welcome, ${username}!`;
+        const firstname = userData.firstname;
+        const balance = userData.balance;
+        const investments = userData.investments;
+        
+        // Update balance element
+        const balanceElement = document.getElementById("balance");
+        balanceElement.innerHTML = `
+        <div>
+              <h4>${balance}</h4>
+              <span>Balance</span>
+            </div>
+            <div>
+              <span class="fas fa-wallet"></span>
+            </div>
+        `;
+
+        //Active Investments
+        const investmentsElement = document.getElementById("investments");
+        investmentsElement.innerHTML = `
+        <div>
+              <h4>${investments}</h4>
+              <span>Investments</span>
+            </div>
+            <div>
+              <span class="fas fa-clipboard-list"></span>
+            </div>
+        `;
+
+        // Retrieve and display the username
+        document.getElementById("welcomeMessage").textContent = `Welcome, ${firstname}!`;
         const userDataDiv = document.querySelector(".user-info");
         userDataDiv.innerHTML = `
           <i class="fa-solid fa-user"></i>
-          <p>Hello, <br> ${userData.username}!</p>
+          <p>Hello, <br> ${firstname}!</p>
         `;
       } else {
         console.log("No user data found");
@@ -110,7 +136,6 @@ const showPopup = (message) => {
 const closePopup = () => {
   const popup = document.getElementById("popup");
   popup.classList.remove("show");
-  
 };
 
 document.querySelector(".close").addEventListener("click", closePopup);

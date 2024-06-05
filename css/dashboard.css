@@ -244,7 +244,6 @@ h2 {
   font-size: 1rem;
   padding: 12px 0;
   margin: 0 8px;
-  border-radius: 5px;
 }
 
 .nav-item.active a {
@@ -332,43 +331,65 @@ h2 {
 
 
 
+.home {
+  margin-left: 15%;
+}
 
 
-
-.cash-fig {
+.cards{
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
   align-items: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  gap: 2rem;
-  margin: 25px 0 0 100px;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+.card-single{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  background: var(--pry-color);
+  color: var(--bg-color);
+  height: 100px;
+  width: 250px;
+  padding: 0.5rem;
+  border: 2px solid var(--pry-color);
+}
+.card-single div:last-child span{
+  color: var(--bg-color);
+  font-size: 2rem;
+
+}
+.card-single div:first-child span{
+  color: var(--bg-color);
+  
+
+}
+.card-single:last-child{
+  background: var(--pry-color);
+}
+.card-single:last-child h1,
+.card-single:last-child div:first-child span,
+.card-single:last-child div:last-child span
+{
   color: #fff;
 }
 
-.cash-fig i {
-  border-radius: 50%;
-  background: var(--bg-color);
-  color: var(--pry-color);
-  padding: 6px;
-  margin-right: 6px;
+.recent-grid{
+  margin-top: 3.5rem;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 65% auto;
+ 
 }
-
-.total-bal,
-.earnings,
-.expenses {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  background: linear-gradient(#216328,
-      #216328,
-      #133917);
-  width: 100%;
-  max-width: 200px;
-  height: 80px;
-  border-radius: 10px;
-  padding: 4px;
+.card{
+  background: #fff;
+  border-radius: 12px;
+   box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
+  padding: 1rem;
 }
 
 

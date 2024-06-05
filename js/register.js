@@ -29,7 +29,8 @@ const database = getDatabase(app);
 
 // DOM Elements
 const form = document.getElementById("form");
-const username = document.getElementById("username");
+const firstname = document.getElementById("firstname");
+const lastname = document.getElementById("lastname");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const password2 = document.getElementById("password2");
@@ -73,24 +74,34 @@ const checkUsernameExists = async (username) => {
 };
 
 const validateInputs = async () => {
-  const usernameValue = username.value.trim();
+  const firstnameValue = firstname.value.trim();
+  const lastnameValue = lastname.value.trim();
   const emailValue = email.value.trim();
   const passwordValue = password.value.trim();
   const password2Value = password2.value.trim();
 
   let isValid = true;
 
-  if (usernameValue === "") {
-    setError(username, "Username is required");
+  if (firstnameValue === "") {
+    setError(firstname, "First name is required");
     isValid = false;
   } else {
-    const usernameExists = await checkUsernameExists(usernameValue);
+    setSuccess(firstname);
+  }
+
+  /* 
+  const usernameExists = await checkUsernameExists(usernameValue);
     if (usernameExists) {
-      setError(username, "Username already taken");
+      setError(username, "Lastname already taken");
       isValid = false;
     } else {
-      setSuccess(username);
-    }
+   */
+
+  if (lastnameValue === "") {
+    setError(lastname, "Last name is required");
+    isValid = false;
+  } else {
+    setSuccess(lastname);
   }
 
   if (emailValue === "") {
@@ -145,7 +156,8 @@ submit.addEventListener("click", async (event) => {
 
   if (await validateInputs()) {
     const emailValue = email.value.trim();
-    const usernameValue = username.value.trim();
+    const firstnameValue = firstname.value.trim();
+    const lastnameValue = lastname.value.trim();
     const passwordValue = password.value.trim();
 
     createUserWithEmailAndPassword(auth, emailValue, passwordValue)
@@ -154,7 +166,8 @@ submit.addEventListener("click", async (event) => {
 
         // Store user data in Realtime Database
         set(ref(database, 'users/' + user.uid), {
-          username: usernameValue,
+          firstname: firstnameValue,
+          lastname: lastnameValue,
           email: emailValue
         }).then(() => {
           showPopup(

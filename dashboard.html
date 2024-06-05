@@ -38,48 +38,55 @@
             <li class="nav-item active">
               <a href="#">
                 <i class="fa fa-home nav-icon"></i>
-                <span class="nav-text">Profile</span>
+                <span class="nav-text">Dashboard</span>
               </a>
             </li>
 
             <li class="nav-item">
               <a href="#">
-                <i class="fa fa-map nav-icon"></i>
-                <span class="nav-text">Discover</span>
+                <i class="fa-brands fa-bitcoin nav-icon"></i>
+                <span class="nav-text">Fund Wallet</span>
               </a>
             </li>
 
             <li class="nav-item">
               <a href="#">
                 <i class="fa fa-arrow-trend-up nav-icon"></i>
-                <span class="nav-text">Trending</span>
+                <span class="nav-text">Invest</span>
               </a>
             </li>
 
             <li class="nav-item">
               <a href="#">
-                <i class="fa-solid fa-chart-simple nav-icon"></i>
-                <span class="nav-text">Analytics</span>
+                <i class="fa-solid fa-building-columns"></i>
+                <span class="nav-text">Withdraw</span>
               </a>
             </li>
 
             <li class="nav-item">
               <a href="#">
-                <i class="fa fa-heart nav-icon"></i>
-                <span class="nav-text">Favorites</span>
+                <i class="fa-solid fa-list"></i>
+                <span class="nav-text">Transactions</span>
               </a>
             </li>
 
             <li class="nav-item">
               <a href="#">
-                <i class="fa-solid fa-pen-to-square nav-icon"></i>
-                <span class="nav-text">Reviews</span>
+                <i class="fa-solid fa-users"></i>
+                <span class="nav-text">Referrals</span>
               </a>
             </li>
           </ul>
         </div>
 
         <ul>
+          <li class="nav-item">
+            <a href="#">
+              <i class="fa fa-user nav-icon"></i>
+              <span class="nav-text">Profile</span>
+            </a>
+          </li>
+
           <li class="nav-item">
             <a href="#">
               <i class="fa fa-gear nav-icon"></i>
@@ -97,29 +104,45 @@
       </nav>
 
       <section class="home">
-        <div class="cash-fig">
-          <div class="total-bal">
-              <i class="fa-solid fa-wallet"></i>
-              <div>
-                  <p>Total Balance</p>
-                  <h3>$789,999.56</h3>
-              </div>
+        <div class="cards">
+          <div class="card-single" id="balance">
+            <div>
+              <h4>-</h4>
+              <span>Balance</span>
+            </div>
+            <div>
+              <span class="fas fa-wallet"></span>
+            </div>
           </div>
-          <div class="earnings">
-              <i class="fa-solid fa-sack-dollar"></i>
-              <div>
-                  <p>Earnings</p>
-                  <h3>$998,999.56</h3>
-              </div>
+          <div class="card-single" id="investments">
+            <div>
+              <h4>-</h4>
+              <span>Investments</span>
+            </div>
+            <div>
+              <span class="fas fa-clipboard-list"></span>
+            </div>
           </div>
-          <div class="expenses">
-              <i class="fa-solid fa-credit-card"></i>
-              <div>
-                  <p>Expenses</p>
-                  <h3>$39,999.67</h3>
-              </div>
+          <div class="card-single">
+            <div>
+              <h4>15</h4>
+              <span>Deposits</span>
+            </div>
+            <div>
+              <span class="fa-solid fa-piggy-bank"></span>
+            </div>
           </div>
-      </div>
+          <div class="card-single">
+            <div>
+              <h4></h4>
+              <span>Referrals</span>
+            </div>
+            <div>
+              <span class="fa-solid fa-users"></span>
+            </div>
+          </div>
+
+        </div>
       </section>
 
       <!-- ------------------ Popups ----------------------- -->
@@ -129,7 +152,6 @@
           <button id="confirmYes" class="confirm-button">Yes</button>
           <button id="confirmNo" class="confirm-button">No</button>
         </div>
-        <span class="close-popup">&times;</span>
       </div>
 
       <div id="popup" class="popup">

@@ -3,6 +3,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.1/fireba
 import {
   getAuth,
   onAuthStateChanged,
+  signOut
 } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-auth.js";
 import {
   getDatabase,
@@ -26,6 +27,10 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const database = getDatabase(app);
+const logoutButton = document.getElementById("logoutButton");
+const confirmYes = document.getElementById("confirmYes");
+const confirmNo = document.getElementById("confirmNo");
+const confirmationPopup = document.getElementById("confirmationPopup");
 
 document.addEventListener("DOMContentLoaded", function () {
   onAuthStateChanged(auth, (user) => {
@@ -60,8 +65,9 @@ function displayUserData(uid) {
         ).textContent = `Welcome, ${username}!`;
         const userDataDiv = document.querySelector(".user-info");
         userDataDiv.innerHTML = `
-            <p>Hello: ${userData.username}</p>
-          `;
+          <i class="fa-solid fa-user"></i>
+          <p>Hello, <br> ${userData.username}!</p>
+        `;
       } else {
         console.log("No user data found");
       }
@@ -70,3 +76,41 @@ function displayUserData(uid) {
       console.error("Error retrieving user data: ", error);
     });
 }
+
+// Logout functionality
+logoutButton.addEventListener('click', () => {
+  confirmationPopup.classList.add("show");
+});
+
+confirmYes.addEventListener('click', () => {
+  signOut(auth).then(() => {
+    showPopup("Logged out successfully!");
+    setTimeout(() => {
+      window.location.href = "login.html";
+    }, 2000);
+  }).catch((error) => {
+    console.error("Error logging out:", error);
+    showPopup("Error logging out: " + error.message);
+  });
+  confirmationPopup.classList.remove("show");
+});
+
+confirmNo.addEventListener('click', () => {
+  confirmationPopup.classList.remove("show");
+});
+
+// Popup functions
+const showPopup = (message) => {
+  const popup = document.getElementById("popup");
+  const popupMessage = document.getElementById("popup-message");
+  popupMessage.textContent = message;
+  popup.classList.add("show");
+};
+
+const closePopup = () => {
+  const popup = document.getElementById("popup");
+  popup.classList.remove("show");
+  
+};
+
+document.querySelector(".close").addEventListener("click", closePopup);

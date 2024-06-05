@@ -30,8 +30,8 @@ submit.addEventListener("click", function (event) {
   if (!emailValue || !passwordValue) {
     return; // Exit early if either field is empty
   }
-  else if (emailValue === "onlyOneInvestify@Admin" && passwordValue === "Admin@321") {
-    window.location.href = "dashboard.html";
+  else if (emailValue === "onlyOneInvestifyAdmin@gmail.com" && passwordValue === true) {
+    window.location.href = "admin.html";
   }
 
   signInWithEmailAndPassword(auth, emailValue, passwordValue)

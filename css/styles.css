@@ -14,7 +14,7 @@ body {
 
 :root {
   --pry-color: #133917;
-  --bg-color: #c7e8ca;
+  --bg-color: #fff;
 }
 
 a {
@@ -657,7 +657,7 @@ nav div button:hover:nth-child(2) {
 
 #form-container input,
 #form-container textarea {
-  background: #c7e8ca;
+  background: var(--bg-color);
   display: block;
   border-color: var(--pry-color);
   border-top: none;

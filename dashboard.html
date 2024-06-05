@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/dashboard.css" />
-    <title>Document</title>
-
+    <title>Dashboard</title>
+    <link rel="icon" href="./img/logo.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -24,22 +24,20 @@
 
     <script type="module" src="./js/dashboard.js"></script>
   </head>
+
   <body>
     <div id="loading-screen" class="loading">Loading;</div>
-    <main id="dashboard-content" class="darkmode">
+    <main id="dashboard-content">
       <nav class="main-menu">
         <div>
           <div class="user-info">
-            <img
-              src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/e5a707f4-d5ac-4f30-afd8-4961ae353dbc"
-              alt="user"
-            />
-            <p id="welcomeMessage">Welcome, User!</p>
+            <i class="fa-solid fa-user"></i>
+            <p id="welcomeMessage"></p>
           </div>
           <ul>
             <li class="nav-item active">
               <a href="#">
-                <i class="fa fa-user nav-icon"></i>
+                <i class="fa fa-home nav-icon"></i>
                 <span class="nav-text">Profile</span>
               </a>
             </li>
@@ -90,18 +88,34 @@
           </li>
 
           <li class="nav-item">
-            <a href="#">
+            <a href="#" id="logoutButton">
               <i class="fa fa-right-from-bracket nav-icon"></i>
               <span class="nav-text">Logout</span>
             </a>
           </li>
         </ul>
       </nav>
+
+      <section class="home"></section>
+
+      <!-- ------------------ Popups ----------------------- -->
+      <div id="confirmationPopup" class="popup">
+        <span id="confirmationMessage">Are you sure you want to log out?</span>
+        <div>
+          <button id="confirmYes" class="confirm-button">Yes</button>
+          <button id="confirmNo" class="confirm-button">No</button>
+        </div>
+        <span class="close-popup">&times;</span>
+      </div>
+
+      <div id="popup" class="popup">
+        <span id="popup-message"></span>
+        <span class="close-popup">&times;</span>
+      </div>
     </main>
 
     <script>
-      //! Active Navbar Item
-
+      //--------------------------- Active Navbar Item
       const navItems = document.querySelectorAll(".nav-item");
 
       navItems.forEach((navItem, i) => {

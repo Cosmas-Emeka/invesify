@@ -3,9 +3,10 @@
 * {
   font-family: "Poppins";
 }
+
 html,
 body {
-  background-color: #d1d3d1;
+  background-color: #f0f3f0;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -17,7 +18,7 @@ a {
 
 :root {
   --pry-color: #133917;
-  --bg-color: #c7e8ca;
+  --bg-color: #fff;
 }
 
 body {
@@ -59,7 +60,7 @@ input[type="password"] {
   padding-left: 4px;
   border: none;
   border-radius: 2px;
-  background-color: #c7e8ca;
+  background-color: var(--bg-color);
   border-bottom: 2px solid #4a7d47;
   font-size: 18px;
   z-index: 3;
@@ -72,34 +73,39 @@ input[type="password"]:focus {
 
 input[type="email"]:autofill,
 input[type="password"]:autofill {
-  background-color: #6da66a !important;
+  background-color: var(--bg-color) !important;
 }
 
 .loginDiv {
   position: relative;
   margin: auto;
   margin-top: 18vh;
-  width: clamp(350px, 30%, 420px);
-  height: clamp(400px, 50%, 450px);
-  background-color: #c7e8ca;
+  width: 350px;
+  height: 450px;
+  background-color: var(--bg-color);
   box-sizing: content-box;
-  box-shadow: 0 0 20px -8px #4a7d47;
+  box-shadow: 0 0 20px -8px #bcbdbc;
 }
 
 .reset-already {
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   margin-top: -1rem;
 }
 
 .reset-already a {
   color: var(--pry-color);
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .reset-already-two {
-  margin-top: 1rem;
+  margin-top: 0.9rem;
   margin-left: 10.5%;
+}
+
+.reset-already-two a {
+  text-decoration: underline;
+  color: var(--pry-color);
 }
 
 .login {
@@ -108,13 +114,12 @@ input[type="password"]:autofill {
   left: 5%;
   width: 90%;
   padding: 10px;
-  background-color: #4a7d47;
+  background-color: var(--pry-color);
   color: white;
   border: none;
   cursor: pointer;
   font-size: 18px;
-  box-shadow: 0 0 10px -5px #2d5c29;
-  transition: all 0.1s;
+  transition: all 0.5s;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -124,10 +129,9 @@ input[type="password"]:autofill {
 }
 
 .login:hover {
-  bottom: 31px;
-  font-size: 20px;
-  background-color: #5d9c59;
-  transition: all 0.1s;
+  bottom: 32px;
+  background-color: #2d7528;
+  transition: all 0.5s;
 }
 
 .login:active {
@@ -168,23 +172,23 @@ label {
   user-select: none;
 }
 
-#password:focus ~ label,
-#password:valid ~ label {
+#password:focus~label,
+#password:valid~label {
   font-size: 14px;
   top: -70px;
   transition: all 0.2s;
   color: #4a7d47;
 }
 
-#email:focus ~ label,
-#email:valid ~ label {
+#email:focus~label,
+#email:valid~label {
   font-size: 14px;
   top: -70px;
   transition: all 0.2s;
   color: #4a7d47;
 }
 
-#email:valid ~ .error {
+#email:valid~.error {
   display: none;
 }
 
@@ -218,11 +222,15 @@ input[aria-invalid="true"] {
 
 .popup-content {
   background-color: white;
-  margin: 25% auto;
+  margin: 200px auto;
   padding: 20px;
   width: 50%;
   text-align: center;
   border-radius: 5px;
+}
+
+.popup-content h2 {
+  color: var(--pry-color);
 }
 
 .close {

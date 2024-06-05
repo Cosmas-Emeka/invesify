@@ -329,6 +329,63 @@ h2 {
   display: block;
 }
 
+
+
+
+
+
+
+.cash-fig {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 25px 0 0 100px;
+  color: #fff;
+}
+
+.cash-fig i {
+  border-radius: 50%;
+  background: var(--bg-color);
+  color: var(--pry-color);
+  padding: 6px;
+  margin-right: 6px;
+}
+
+.total-bal,
+.earnings,
+.expenses {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background: linear-gradient(#216328,
+      #216328,
+      #133917);
+  width: 100%;
+  max-width: 200px;
+  height: 80px;
+  border-radius: 10px;
+  padding: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* MEDIA QUERIES */
 
 @media (max-width: 1500px) {
